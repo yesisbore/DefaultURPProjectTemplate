@@ -15,9 +15,15 @@ public static class Utils
         newEventSystem.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
     }
 
-    public static GameObject CreatePrefab(string prefabName, Transform p = null)
+    public static GameObject CreatePrefab( string prefabName, Transform p = null)
     {
-        GameObject clone = Resources.Load<GameObject>("AllPrefabs/" + prefabName);
+        GameObject clone = Resources.Load<GameObject>(prefabName);
+        if (!clone)
+        {
+            Debug.Log("There is no " + prefabName);
+            return null;
+        }
+        
         clone = GameObject.Instantiate(clone, p);
         clone.name = prefabName;
         return clone;
