@@ -7,4 +7,3 @@ Feature
 2. Audio Manager 
 3. Effect Manager
 
-DefaultURPProjectTemplate
