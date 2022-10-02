@@ -25,13 +25,13 @@ public class SceneController : MonoBehaviour
     #endregion Singleton
     
     #region Variables
-
     
     private string _fadePrefab = "Fade UI";
     
     private string _targetScene;
     private float _fadeInTime;
     private float _fadeOutTime;
+    private bool _isChanging = false;
 
     private CanvasGroup _fadeUI;
     
@@ -49,6 +49,9 @@ public class SceneController : MonoBehaviour
     /// <param name="fadeOutTime"></param>
     public void LoadSceneAsync(string sceneName,float fadeInTime,float fadeOutTime)
     {
+        if(_isChanging) return;
+
+        _isChanging = true;
         _targetScene = sceneName;
         _fadeInTime = fadeInTime;
         _fadeOutTime = fadeOutTime;
@@ -105,6 +108,11 @@ public class SceneController : MonoBehaviour
     
     private IEnumerator CO_LoadTargetScene()
     {
+        var mainCam = Camera.main;
+        if (mainCam)
+        {
+            mainCam.GetComponent<AudioListener>().enabled = false;
+        }
         yield return SceneManager.LoadSceneAsync(_targetScene, LoadSceneMode.Additive);
     } // End of CO_LoadTargetScene
     
