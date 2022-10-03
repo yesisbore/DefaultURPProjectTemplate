@@ -47,19 +47,21 @@ namespace UnityCore
     #region Scene Load Methods
 
     /// <summary>
-    /// Calling this function creates a Fade UI prefab asynchronously in the resource folder,
-    /// loads the scene asynchronously using the two parameters received,
+    /// Calling this function creates a Fade UI prefab asynchronously in the Addressable,
+    /// loads the scene asynchronously using the four parameters received,
     /// and deletes the instance when the previous scene is unloaded.
+    /// All parameters have default, so you only need to fill in the values you want.
     /// </summary>
-    /// <param name="sceneName">Name of the scene you want to load as a string</param>
-    /// <param name="fadeInTime"></param>
-    /// <param name="fadeOutTime"></param>
-    public void LoadSceneAsync(SceneType tartgetScene,UnityAction sceneLoadedAction = null, float fadeInTime = 1.0f,float fadeOutTime = 1.0f)
+    /// <param name="targetScene">Name of the scene you want to load as a SceneType</param>
+    /// <param name="sceneLoadedAction">UnityAction you want to run after the scene is loaded</param>
+    /// <param name="fadeInTime">Default Value is 1.0f</param>
+    /// <param name="fadeOutTime">Default Value is 1.0f</param>
+    public void LoadSceneAsync(SceneType targetScene,UnityAction sceneLoadedAction = null, float fadeInTime = 1.0f,float fadeOutTime = 1.0f)
     {
         if(_isChanging) return;
 
         _isChanging = true;
-        _targetScene = tartgetScene;
+        _targetScene = targetScene;
         _fadeInTime = fadeInTime;
         _fadeOutTime = fadeOutTime;
         _sceneLoadedEvent.AddListener(sceneLoadedAction);
