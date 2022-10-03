@@ -1,9 +1,9 @@
 # DefaultURPProjectTemplate
 
-Unity Version - 2020.3.31 / URP
+Unity Version - 2021.3.8f / URP
 
 Feature 
 1. Scene Controller - Contain Fade In/Out 
-2. Audio Manager 
-3. Effect Manager
+2. Audio Controller - Play,Pause,Stop,Restart / Control volume use mixer
+3. Effect Controller - Will be added
 
