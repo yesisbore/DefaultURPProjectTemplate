@@ -1,8 +1,10 @@
-﻿
-    #region Variables
+﻿    #region Variables
 
-
-
+    // Public Variables
+    //public bool DebugMode;
+    
+    // Private Variables
+    
     #endregion Variables
 
     #region Unity Methods
@@ -13,31 +15,44 @@
 
     #endregion Unity Methods
 
-    #region Help Methods
+    #region Public Methods
+
+    #endregion Public Methods
+    
+    #region Private Methods
 
     //private void Initialize(){GetComponents();} // End of Initialize
     
     //private void GetComponents(){} // End of GetComponents
 
-    // private IEnumerator CO_Move()
+    // private IEnumerator CO_Lerp()
     // {
-    //     var startPos = transform.position;
-    //     var targetPos = _chasingTarget.position;
-    //         
-    //     var lerpValue = 0f;
+    // var initialValue = 1.0f;
+    // var targetValue =  0.0f;
+    // var duration = 1.0f;
+    // var timer = 0.0f;
     //
-    //     while (lerpValue <= 1f)
-    //     {
-    //         lerpValue += Time.deltaTime / _moveTime;
-    //
-    //         var movePos = Vector3.Lerp(startPos, targetPos, lerpValue);
-    //             
-    //         transform.position = movePos;
-    //             
-    //         yield return null;
-    //     }
-    //         
+    // while (timer < duration)
+    // {
+    //      = Mathf.Lerp(initialValue, targetValue, timer / duration);
+    // timer += Time.deltaTime;
+    // yield return null;
+    // }
     //     Destroy(gameObject);
     // } // End of CO_Move
 
-    #endregion Help Methods
+    // private void Log(string msg)
+    // {
+    //     if(!DebugMode) return;
+    //             
+    //     Debug.Log("[Audio Controller]: " + msg);
+    // }
+    //
+    // private void LogWarning(string msg)
+    // {
+    //     if(!DebugMode) return;
+    //             
+    //     Debug.Log("[Audio Controller]: " + msg);
+    // }
+    
+    #endregion Private Methods

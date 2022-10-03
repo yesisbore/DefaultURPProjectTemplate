@@ -1,0 +1,262 @@
+using System.Collections;
+using UnityEngine;
+
+namespace UnityCore
+{
+    namespace Audio
+    {
+        public class AudioController : MonoBehaviour
+        {
+            #region Variables
+
+            // Public Variables
+            public static AudioController Instance;
+
+            public bool DebugMode;
+            public AudioTrack[] Tracks;
+            
+            // Private Variables
+            private Hashtable _audioTable; // Relationship between audio types (key) and audio tracks (value)
+            private Hashtable _jobTable;   // Relationship between audio types (key) and jobs (value) (Coroutine, IEnumerator)
+
+            #endregion Variables
+
+            #region Unity Methods
+
+
+
+            #endregion Unity Methods
+
+            private void Awake()
+            {
+                if (!Instance)
+                {
+                    Configure();
+                }
+            } // End of Unity - Awake
+
+            private void OnDisable()
+            {
+                Dispose();
+            } // End of Unity - OnDisable
+            
+            #region Public Methods
+
+            public void PlayAudio(AudioType type, bool fade = false, float delay = 0.0f)
+            {
+                AddJob(new AudioJob(AudioAction.START, type, fade, delay));
+            }
+
+            public void StopAudio(AudioType type, bool fade = false, float delay = 0.0f)
+            {
+                AddJob(new AudioJob(AudioAction.STOP, type, fade, delay));
+            }
+            
+            public void PauseAudio(AudioType type, bool fade = false, float delay = 0.0f)
+            {
+                AddJob(new AudioJob(AudioAction.PAUSE, type, fade, delay));
+            }
+            
+            public void RestartAudio(AudioType type, bool fade = false, float delay = 0.0f)
+            {
+                AddJob(new AudioJob(AudioAction.RESTART, type, fade, delay));
+            }
+            
+            #endregion Public Methods
+
+            #region Private Methods
+
+            private void Configure()
+            {
+                Instance = this;
+                _audioTable = new Hashtable();
+                _jobTable = new Hashtable();
+                GenerateAudioTable();
+            } // End of Configure
+
+            private void Dispose()
+            {
+                foreach (DictionaryEntry entry in _jobTable)
+                {
+                    var job = (IEnumerator) entry.Value;
+                    StopCoroutine(job);
+                }
+            } // End of Dispose
+
+            private void GenerateAudioTable()
+            {
+                foreach (var track in Tracks)
+                {
+                    foreach (var audioObj in track.Audio)
+                    {
+                        // Do not duplicate keys
+                        if (_audioTable.ContainsKey(audioObj.Type))
+                        {
+                            LogWarning("You trying to register audio ["+audioObj.Type+"] that has already been registered" );
+                        }
+                        else
+                        {
+                            _audioTable.Add(audioObj.Type , track);
+                            Log("Registering audio [" + audioObj.Type + "]");
+                        }
+                    }
+                }
+            } // End of GenerateAudioTable
+
+            private void AddJob(AudioJob job)
+            {
+                // Remove conflicting job
+                RemoveConflictingJobs(job.Type);
+                
+                // Start job - Coroutine
+                var jobRunner = RunAudioJob(job);
+                _jobTable.Add(job.Type,jobRunner);
+                StartCoroutine(jobRunner);
+                
+                Log("Starting job on ["+ job.Type + "] with operation " + job.Action);
+            } // End of AddJob
+
+            private IEnumerator RunAudioJob(AudioJob job)
+            {
+                Log("Job count : " + _jobTable.Count);
+
+                yield return new WaitForSeconds(job.Delay);
+                
+                var track = (AudioTrack) _audioTable[job.Type];
+                var source = track.Source;
+                
+                source.clip = GetAudioClipFromAudioTrack(job.Type, track);
+
+                switch (job.Action)
+                {
+                    case AudioAction.START:
+                        source.Play();
+                        break;
+                    case AudioAction.STOP:
+                        if (!job.Fade)
+                        {
+                            source.Stop();
+                        }
+                        break;
+                    case AudioAction.PAUSE:
+                        if (!job.Fade)
+                        {
+                            source.Pause();
+                            yield break;
+                        }
+                        break;
+                    case AudioAction.RESTART:
+                        source.Stop();
+                        source.Play();
+                        break;
+                }
+
+                if (job.Fade)
+                {
+                    var initialValue = job.Action == AudioAction.START || job.Action == AudioAction.RESTART ?  0.0f : 1.0f;
+                    var targetValue = initialValue == 0.0f ? 1.0f : 0.0f;
+                    var duration = 1.0f;
+                    var timer = 0.0f;
+                    
+                    
+                    while (timer < duration)
+                    {
+                        source.volume = Mathf.Lerp(initialValue, targetValue, timer / duration);
+                        timer += Time.deltaTime;
+                        yield return null;
+                    }
+
+                    if (job.Action == AudioAction.STOP)
+                    {
+                        source.Stop();
+                    }
+
+                    if (job.Action == AudioAction.PAUSE)
+                    {
+                        source.Pause();
+                        yield break;
+                    }
+                }
+
+                while (source.isPlaying)
+                {
+                    yield return null;
+                }
+
+                _jobTable.Remove(job.Type);
+                Log("Job count : " + _jobTable.Count);
+                yield return null;
+            } // End of RunAudioJob
+
+            private AudioClip GetAudioClipFromAudioTrack(AudioType type,AudioTrack track)
+            {
+                foreach (var audioObj in track.Audio)
+                {
+                    if (audioObj.Type == type)
+                    {
+                        return audioObj.Clip;
+                    }
+                }
+
+                return null;
+            } // End of GetAudioClipFromAudioTrack            
+            
+            private void RemoveConflictingJobs(AudioType type)
+            {
+                if (_jobTable.ContainsKey(type))
+                {
+                    RemoveJob(type);
+                }
+
+                var conflictAudio = AudioType.None;
+                foreach (DictionaryEntry entry in _jobTable)
+                {
+                    var audioType = (AudioType) entry.Key;
+                    var audioTrackInUse = (AudioTrack) _audioTable[audioType];
+                    var audioTrackNeeded = (AudioTrack) _audioTable[type];
+
+                    if (audioTrackNeeded.Source == audioTrackInUse.Source)
+                    {
+                        // Conflict
+                        conflictAudio = audioType;
+                    }
+                }
+
+                if (conflictAudio != AudioType.None)
+                {
+                    RemoveJob(conflictAudio);
+                }
+            } // End of RemoveConflictingJobs
+
+            private void RemoveJob(AudioType type)
+            {
+                if (!_jobTable.ContainsKey(type))
+                {
+                    LogWarning("You trying to stop a job ["+type + "] that is not running");
+                    return;
+                }
+
+                var runningJob = (IEnumerator) _jobTable[type];
+                StopCoroutine(runningJob);
+                _jobTable.Remove(type);
+            } // End of RemoveJob
+            
+            private void Log(string msg)
+            {
+                if(!DebugMode) return;
+                
+                Debug.Log("[Audio Controller]: " + msg);
+            }
+
+            private void LogWarning(string msg)
+            {
+                if(!DebugMode) return;
+                
+                Debug.Log("[Audio Controller]: " + msg);
+            }
+            
+            #endregion Private Methods
+        }
+    }
+}
+
