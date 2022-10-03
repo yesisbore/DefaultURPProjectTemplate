@@ -105,6 +105,8 @@ namespace UnityCore
 
             private void Dispose()
             {
+                if(_jobTable == null) return;
+                
                 foreach (DictionaryEntry entry in _jobTable)
                 {
                     var job = (IEnumerator) entry.Value;

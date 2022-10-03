@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0cfb5a3795743ae9d0fce796749f81, type: 3}
   m_Name: GameSetting
   m_EditorClassIdentifier: 
+  DebugMode: 1
   name: 
-  VolumeMaster: 1
-  VolumeBGM: 1
-  VolumeEffect: 1
+  VolumeMaster: 0.643
+  VolumeBGM: 0.626
+  VolumeEffect: 0.558

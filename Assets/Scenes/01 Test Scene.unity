@@ -782,8 +782,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737539657}
-        m_TargetAssemblyTypeName: TempTestMethods, Assembly-CSharp
+      - m_Target: {fileID: 1862292255}
+        m_TargetAssemblyTypeName: TestScene, Assembly-CSharp
         m_MethodName: OnLoadMainSceneTest
         m_Mode: 1
         m_Arguments:
@@ -1116,7 +1116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3117c27b456b24e1cb2930a6596039b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 0
   _globalVolumeMaster: {fileID: 67972173}
   _globalVolumeBGM: {fileID: 1521216582}
   _globalVolumeEffect: {fileID: 235572106}
@@ -1401,8 +1400,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 737539657}
-        m_TargetAssemblyTypeName: TempTestMethods, Assembly-CSharp
+      - m_Target: {fileID: 1862292255}
+        m_TargetAssemblyTypeName: TestScene, Assembly-CSharp
         m_MethodName: OnLoadTestSceneTest
         m_Mode: 1
         m_Arguments:
@@ -2130,7 +2129,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d01b223b22444fbb7ef7ad448dc7e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebugMode: 0
   Tracks:
   - Source: {fileID: 532868226}
     Audio:
@@ -2299,6 +2297,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1862292254}
   - component: {fileID: 1862292253}
+  - component: {fileID: 1862292255}
   m_Layer: 0
   m_Name: Tests
   m_TagString: Untagged
@@ -2334,6 +2333,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862292255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c987b52b38b49faaa74bbe5b8e092a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1985765104
 GameObject:
   m_ObjectHideFlags: 0

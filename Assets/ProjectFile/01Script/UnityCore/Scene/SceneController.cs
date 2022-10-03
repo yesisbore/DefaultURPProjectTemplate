@@ -1,10 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
+using UnityCore.Scnene;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.SceneManagement;
 
-public class SceneController : MonoBehaviour
+namespace UnityCore
+{
+    namespace Scene
+    {
+        public class SceneController : MonoBehaviour
 {
     #region Singleton
 
@@ -28,7 +32,7 @@ public class SceneController : MonoBehaviour
     
     private string _fadePrefab = "Fade UI";
     
-    private string _targetScene;
+    private SceneType _targetScene;
     private float _fadeInTime;
     private float _fadeOutTime;
     private bool _isChanging = false;
@@ -47,12 +51,12 @@ public class SceneController : MonoBehaviour
     /// <param name="sceneName">Name of the scene you want to load as a string</param>
     /// <param name="fadeInTime"></param>
     /// <param name="fadeOutTime"></param>
-    public void LoadSceneAsync(string sceneName,float fadeInTime,float fadeOutTime)
+    public void LoadSceneAsync(SceneType tartgetScene,float fadeInTime,float fadeOutTime)
     {
         if(_isChanging) return;
 
         _isChanging = true;
-        _targetScene = sceneName;
+        _targetScene = tartgetScene;
         _fadeInTime = fadeInTime;
         _fadeOutTime = fadeOutTime;
         
@@ -112,7 +116,7 @@ public class SceneController : MonoBehaviour
         var mainCam = Camera.main;
         if (mainCam) mainCam.GetComponent<AudioListener>().enabled = false;
         
-        var ao = SceneManager.LoadSceneAsync(_targetScene, LoadSceneMode.Additive);
+        var ao = SceneManager.LoadSceneAsync((int)_targetScene, LoadSceneMode.Additive);
         // Avoid showing the scene until the current scene is loaded.
         ao.allowSceneActivation = false;
 
@@ -154,4 +158,6 @@ public class SceneController : MonoBehaviour
     }
 
     #endregion
+}
+    }
 }
