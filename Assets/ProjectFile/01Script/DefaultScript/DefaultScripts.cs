@@ -1,7 +1,6 @@
 ﻿    #region Variables
 
     // Public Variables
-    //public bool DebugMode;
     
     // Private Variables
     
@@ -43,14 +42,14 @@
 
     // private void Log(string msg)
     // {
-    //     if(!DebugMode) return;
+    //     if(!GameSetting.Instance.DebugMode) return;
     //             
     //     Debug.Log("[Audio Controller]: " + msg);
     // }
     //
     // private void LogWarning(string msg)
     // {
-    //     if(!DebugMode) return;
+    //     if(!GameSetting.Instance.DebugMode) return;
     //             
     //     Debug.Log("[Audio Controller]: " + msg);
     // }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GameSetting : SingletonScriptableObject<GameSetting>
 {
+    public bool DebugMode = false;
+    
     public string name = "";
 
     [Header("Volume Setting")] 

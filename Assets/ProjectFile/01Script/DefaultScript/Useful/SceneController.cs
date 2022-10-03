@@ -108,12 +108,25 @@ public class SceneController : MonoBehaviour
     
     private IEnumerator CO_LoadTargetScene()
     {
+        // Disable current scene camera audio listener
         var mainCam = Camera.main;
-        if (mainCam)
+        if (mainCam) mainCam.GetComponent<AudioListener>().enabled = false;
+        
+        var ao = SceneManager.LoadSceneAsync(_targetScene, LoadSceneMode.Additive);
+        // Avoid showing the scene until the current scene is loaded.
+        ao.allowSceneActivation = false;
+
+        while (!ao.isDone)
         {
-            mainCam.GetComponent<AudioListener>().enabled = false;
+            Log("Load scene progress : " + ao.progress);
+            
+            if (ao.progress >= 0.9f)
+            {
+                ao.allowSceneActivation = true;
+            }
+            yield return null;
         }
-        yield return SceneManager.LoadSceneAsync(_targetScene, LoadSceneMode.Additive);
+        
     } // End of CO_LoadTargetScene
     
     private IEnumerator CO_UnLoadCurrentScene()
@@ -123,4 +136,22 @@ public class SceneController : MonoBehaviour
     } // End of CO_UnLoadCurrentScene
 
     #endregion CoRoutines
+
+    #region Private Methods
+
+    private void Log(string msg)
+    { 
+        if(!GameSetting.Instance.DebugMode) return;
+        
+        Debug.Log("[Scene Controller]: " + msg);
+    }
+    
+    private void LogWarning(string msg)
+    {
+        if(!GameSetting.Instance.DebugMode) return;
+        
+        Debug.Log("[Scene Controller]: " + msg);
+    }
+
+    #endregion
 }

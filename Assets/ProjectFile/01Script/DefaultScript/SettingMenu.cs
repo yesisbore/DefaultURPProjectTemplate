@@ -9,11 +9,7 @@ public class SettingMenu : MonoBehaviour
     #region Variables
 
     //Public Variables
-    
-    public bool DebugMode;
 
-
-    
     // Private Variables
 
     [Header("Audio Setting Sliders")] 
@@ -42,9 +38,10 @@ public class SettingMenu : MonoBehaviour
 
     private void Initialize()
     {
-        InitSliderValue();
         GetComponents();
         AddEvent();
+        
+        InitSliderValue();
     } // End of Initialize
 
     private void InitSliderValue()
@@ -68,14 +65,14 @@ public class SettingMenu : MonoBehaviour
 
     private void Log(string msg)
     {
-        if(!DebugMode) return;
+        if(!GameSetting.Instance.DebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }
     
     private void LogWarning(string msg)
     {
-        if(!DebugMode) return;
+        if(!GameSetting.Instance.DebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }

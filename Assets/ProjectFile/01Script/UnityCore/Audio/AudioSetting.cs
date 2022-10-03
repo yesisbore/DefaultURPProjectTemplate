@@ -8,7 +8,6 @@ public class AudioSetting : MonoBehaviour
 
     //Public Variables
     
-    public bool DebugMode;
     
     // Private Variables
     
@@ -32,14 +31,14 @@ public class AudioSetting : MonoBehaviour
     
     private void Log(string msg)
     {
-        if(!DebugMode) return;
+        if(!GameSetting.Instance.DebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }
     
     private void LogWarning(string msg)
     {
-        if(!DebugMode) return;
+        if(!GameSetting.Instance.DebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }

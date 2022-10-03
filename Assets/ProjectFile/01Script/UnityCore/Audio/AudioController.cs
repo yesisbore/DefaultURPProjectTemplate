@@ -14,7 +14,6 @@ namespace UnityCore
             // Public Variables
             public static AudioController Instance;
 
-            public bool DebugMode;
             public AudioTrack[] Tracks;
             
             // Private Variables
@@ -141,14 +140,6 @@ namespace UnityCore
                 GlobalVolumeControlMaster(GameSetting.Instance.VolumeMaster);
                 GlobalVolumeControlBGM(GameSetting.Instance.VolumeBGM);
                 GlobalVolumeControlEffect(GameSetting.Instance.VolumeEffect);
-                
-                _globalMixer.GetFloat(_volumeNameMaster,out var temp1);
-                Log("Master Volume : "+ temp1);
-                _globalMixer.GetFloat(_volumeNameBGM,out var temp2);
-                Log("BGM Volume : "+ temp2);
-                _globalMixer.GetFloat(_volumeNameEffect,out var temp3);
-                Log("Effect Volume : "+ temp3);
-                
             } // End of InitializeVolumeSetting
 
             private void SetMixerVolume(string volumeKey,float value)
@@ -301,14 +292,14 @@ namespace UnityCore
             
             private void Log(string msg)
             {
-                if(!DebugMode) return;
+                if(!GameSetting.Instance.DebugMode) return;
                 
                 Debug.Log("[Audio Controller]: " + msg);
             }
 
             private void LogWarning(string msg)
             {
-                if(!DebugMode) return;
+                if(!GameSetting.Instance.DebugMode) return;
                 
                 Debug.Log("[Audio Controller]: " + msg);
             }
