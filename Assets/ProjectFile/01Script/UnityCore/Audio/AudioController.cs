@@ -25,7 +25,7 @@ namespace UnityCore
             private AudioMixer _globalMixer;
             
             private const string _volumeNameMaster = "MasterVolume";
-            private const string _volumeNameBGM = "BGMVolume";
+            private const string _volumeNameBGM    = "BGMVolume";
             private const string _volumeNameEffect = "EffectVolume";
             
             #endregion Variables

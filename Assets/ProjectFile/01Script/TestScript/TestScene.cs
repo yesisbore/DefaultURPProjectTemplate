@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityCore.Scene;
 using UnityCore.Scnene;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TestScene : MonoBehaviour
+namespace TestScript
 {
-    #region Variables
-
-
-    #endregion Variables
-
-    #region Help Methods
-
-    public void OnLoadMainSceneTest()
+    public class TestScene : MonoBehaviour
     {
-        SceneController.Instance.LoadSceneAsyncWithFade(SceneType.DefaultScene,()=>{Debug.Log("DefaultSceneLoad");});
-    } // End of OnLoadSceneTest
+        #region Variables
+
+
+        #endregion Variables
+
+        #region Help Methods
+
+        public void OnLoadMainSceneTest()
+        {
+            SceneController.Instance.LoadSceneAsyncWithFade(SceneType.DefaultScene,()=>{Debug.Log("DefaultSceneLoad");});
+        } // End of OnLoadSceneTest
     
-    public void OnLoadTestSceneTest()
-    {
-        SceneController.Instance.LoadSceneAsync(SceneType.TestScene,()=>{Debug.Log("TestSceneLoad");});
-    } // End of OnLoadSceneTest
+        public void OnLoadTestSceneTest()
+        {
+            SceneController.Instance.LoadSceneAsync(SceneType.TestScene,()=>{Debug.Log("TestSceneLoad");});
+        } // End of OnLoadSceneTest
     
-    #endregion Help Methods
+        #endregion Help Methods
+    }
 }
+
