@@ -47,6 +47,21 @@ namespace UnityCore
     #region Scene Load Methods
 
     /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="targetScene">Name of the scene you want to load as a SceneType</param>
+    /// <param name="sceneLoadedAction">UnityAction you want to run after the scene is loaded</param>
+    public void LoadSceneAsync(SceneType targetScene,UnityAction sceneLoadedAction = null)
+    {
+        if(_isChanging) return;
+
+        _isChanging = true;
+        _targetScene = targetScene;
+        _sceneLoadedEvent.AddListener(sceneLoadedAction);
+        StartCoroutine(CO_LoadScene());
+    } // End of LoadSceneAsync
+    
+    /// <summary>
     /// Calling this function creates a Fade UI prefab asynchronously in the Addressable,
     /// loads the scene asynchronously using the four parameters received,
     /// and deletes the instance when the previous scene is unloaded.
@@ -56,7 +71,7 @@ namespace UnityCore
     /// <param name="sceneLoadedAction">UnityAction you want to run after the scene is loaded</param>
     /// <param name="fadeInTime">Default Value is 1.0f</param>
     /// <param name="fadeOutTime">Default Value is 1.0f</param>
-    public void LoadSceneAsync(SceneType targetScene,UnityAction sceneLoadedAction = null, float fadeInTime = 1.0f,float fadeOutTime = 1.0f)
+    public void LoadSceneAsyncWithFade(SceneType targetScene,UnityAction sceneLoadedAction = null, float fadeInTime = 1.0f,float fadeOutTime = 1.0f)
     {
         if(_isChanging) return;
 
@@ -71,10 +86,10 @@ namespace UnityCore
         {
             var go = op.Result;
             _fadeUI =  go.GetComponent<CanvasGroup>();
-            StartCoroutine(CO_LoadScene());
+            StartCoroutine(CO_LoadSceneWithFade());
         };
         
-    } // End of LoadMainScene
+    } // End of LoadSceneAsyncWithFade
 
     #endregion Scene Load Methods
 
@@ -82,13 +97,18 @@ namespace UnityCore
 
     private IEnumerator CO_LoadScene()
     {
+        yield return StartCoroutine(CO_SceneChange());
+        SceneLoaded();
+    } // End of CO_LoadScene
+    
+    private IEnumerator CO_LoadSceneWithFade()
+    {
         yield return StartCoroutine(CO_FadeIn());
         yield return StartCoroutine(CO_SceneChange());
         yield return StartCoroutine(CO_FadeOut());
         Addressables.Release(_fadeUI.gameObject);
-        _sceneLoadedEvent.Invoke();
-        Destroy(gameObject);
-    } // End of CO_LoadScene
+        SceneLoaded();
+    } // End of CO_LoadSceneWithFade
     
     private IEnumerator CO_FadeIn()
     {
@@ -150,6 +170,12 @@ namespace UnityCore
 
     #region Private Methods
 
+    private void SceneLoaded()
+    {
+        _sceneLoadedEvent.Invoke();
+        Destroy(gameObject);
+    } // End of SceneLoaded
+    
     private void Log(string msg)
     { 
         if(!GameSetting.Instance.DebugMode) return;

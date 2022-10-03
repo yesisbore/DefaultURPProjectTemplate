@@ -16,7 +16,7 @@ public class TestScene : MonoBehaviour
 
     public void OnLoadMainSceneTest()
     {
-        SceneController.Instance.LoadSceneAsync(SceneType.DefaultScene,()=>{Debug.Log("DefaultSceneLoad");});
+        SceneController.Instance.LoadSceneAsyncWithFade(SceneType.DefaultScene,()=>{Debug.Log("DefaultSceneLoad");});
     } // End of OnLoadSceneTest
     
     public void OnLoadTestSceneTest()
