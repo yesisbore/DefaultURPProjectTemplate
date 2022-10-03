@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 namespace UnityCore
 {
@@ -19,14 +21,18 @@ namespace UnityCore
             private Hashtable _audioTable; // Relationship between audio types (key) and audio tracks (value)
             private Hashtable _jobTable;   // Relationship between audio types (key) and jobs (value) (Coroutine, IEnumerator)
 
+            
+            // Mixer Control
+            private AudioMixer _globalMixer;
+            
+            private const string _volumeNameMaster = "MasterVolume";
+            private const string _volumeNameBGM = "BGMVolume";
+            private const string _volumeNameEffect = "EffectVolume";
+            
             #endregion Variables
 
             #region Unity Methods
-
-
-
-            #endregion Unity Methods
-
+            
             private void Awake()
             {
                 if (!Instance)
@@ -39,9 +45,13 @@ namespace UnityCore
             {
                 Dispose();
             } // End of Unity - OnDisable
+
+            #endregion Unity Methods
+
             
             #region Public Methods
 
+            // Play Methods
             public void PlayAudio(AudioType type, bool fade = false, float delay = 0.0f)
             {
                 AddJob(new AudioJob(AudioAction.START, type, fade, delay));
@@ -61,6 +71,24 @@ namespace UnityCore
             {
                 AddJob(new AudioJob(AudioAction.RESTART, type, fade, delay));
             }
+
+            public void GlobalVolumeControlMaster(float value)
+            {
+                GameSetting.Instance.VolumeMaster = value;
+                SetMixerVolume(_volumeNameMaster, value);
+            } // End of GlobalVolumeControlMaster
+            
+            public void GlobalVolumeControlBGM(float value)
+            {
+                GameSetting.Instance.VolumeBGM = value;
+                SetMixerVolume(_volumeNameBGM, value);
+            } // End of GlobalVolumeControlBGM
+            
+            public void GlobalVolumeControlEffect(float value)
+            {
+                GameSetting.Instance.VolumeEffect = value;
+                SetMixerVolume(_volumeNameEffect, value);
+            } // End of GlobalVolumeControlEffect
             
             #endregion Public Methods
 
@@ -71,6 +99,8 @@ namespace UnityCore
                 Instance = this;
                 _audioTable = new Hashtable();
                 _jobTable = new Hashtable();
+
+                InitializeVolumeSetting();
                 GenerateAudioTable();
             } // End of Configure
 
@@ -102,6 +132,34 @@ namespace UnityCore
                     }
                 }
             } // End of GenerateAudioTable
+
+            private void InitializeVolumeSetting()
+            {
+                // Set Mixer
+                _globalMixer = Tracks[0].Source.outputAudioMixerGroup.audioMixer;
+
+                GlobalVolumeControlMaster(GameSetting.Instance.VolumeMaster);
+                GlobalVolumeControlBGM(GameSetting.Instance.VolumeBGM);
+                GlobalVolumeControlEffect(GameSetting.Instance.VolumeEffect);
+                
+                _globalMixer.GetFloat(_volumeNameMaster,out var temp1);
+                Log("Master Volume : "+ temp1);
+                _globalMixer.GetFloat(_volumeNameBGM,out var temp2);
+                Log("BGM Volume : "+ temp2);
+                _globalMixer.GetFloat(_volumeNameEffect,out var temp3);
+                Log("Effect Volume : "+ temp3);
+                
+            } // End of InitializeVolumeSetting
+
+            private void SetMixerVolume(string volumeKey,float value)
+            {
+                var volume = GetMappingVolume(value);
+                
+                _globalMixer.SetFloat(volumeKey, volume);
+                Log(volumeKey + " : " + volume);
+            } // End of SetMixerMasterVolume
+
+            private float GetMappingVolume(float value) => Mathf.Lerp(-80.0f, 5.0f, value);
 
             private void AddJob(AudioJob job)
             {
