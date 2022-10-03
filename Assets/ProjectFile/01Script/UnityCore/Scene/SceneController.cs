@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using UnityCore.Scnene;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace UnityCore
@@ -38,6 +40,7 @@ namespace UnityCore
     private bool _isChanging = false;
 
     private CanvasGroup _fadeUI;
+    private UnityEvent _sceneLoadedEvent = new UnityEvent();
     
     #endregion Variables
 
@@ -51,7 +54,7 @@ namespace UnityCore
     /// <param name="sceneName">Name of the scene you want to load as a string</param>
     /// <param name="fadeInTime"></param>
     /// <param name="fadeOutTime"></param>
-    public void LoadSceneAsync(SceneType tartgetScene,float fadeInTime,float fadeOutTime)
+    public void LoadSceneAsync(SceneType tartgetScene,UnityAction sceneLoadedAction = null, float fadeInTime = 1.0f,float fadeOutTime = 1.0f)
     {
         if(_isChanging) return;
 
@@ -59,6 +62,7 @@ namespace UnityCore
         _targetScene = tartgetScene;
         _fadeInTime = fadeInTime;
         _fadeOutTime = fadeOutTime;
+        _sceneLoadedEvent.AddListener(sceneLoadedAction);
         
         // Load Fade UI
         Addressables.InstantiateAsync(_fadePrefab,transform).Completed += (op) =>
@@ -80,6 +84,7 @@ namespace UnityCore
         yield return StartCoroutine(CO_SceneChange());
         yield return StartCoroutine(CO_FadeOut());
         Addressables.Release(_fadeUI.gameObject);
+        _sceneLoadedEvent.Invoke();
         Destroy(gameObject);
     } // End of CO_LoadScene
     

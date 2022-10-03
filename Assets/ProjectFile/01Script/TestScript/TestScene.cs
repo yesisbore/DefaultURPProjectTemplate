@@ -16,12 +16,12 @@ public class TestScene : MonoBehaviour
 
     public void OnLoadMainSceneTest()
     {
-        SceneController.Instance.LoadSceneAsync(SceneType.DefaultScene,1f,1f);
+        SceneController.Instance.LoadSceneAsync(SceneType.DefaultScene,()=>{Debug.Log("DefaultSceneLoad");});
     } // End of OnLoadSceneTest
     
     public void OnLoadTestSceneTest()
     {
-        SceneController.Instance.LoadSceneAsync(SceneType.TestScene,1f,1f);
+        SceneController.Instance.LoadSceneAsync(SceneType.TestScene,()=>{Debug.Log("TestSceneLoad");});
     } // End of OnLoadSceneTest
     
     #endregion Help Methods
