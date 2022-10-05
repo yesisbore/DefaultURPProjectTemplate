@@ -21,6 +21,10 @@ MonoBehaviour:
     m_Address: Fade UI
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: 7c1776cf241377f4fbebaf6e4a849d36
+    m_Address: Indicator
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a2deac4653c164d81b4e65d7c45e5979, type: 2}
   m_SchemaSet:
