@@ -3180,7 +3180,7 @@ MonoBehaviour:
     m_SubObjectName: 
     m_SubObjectType: 
     m_EditorAssetChanged: 0
-  _useInput: 1
+  _useInput: 0
   _targetLayer:
     serializedVersion: 2
     m_Bits: 64

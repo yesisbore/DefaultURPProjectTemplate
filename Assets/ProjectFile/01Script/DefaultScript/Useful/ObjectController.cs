@@ -92,6 +92,16 @@ namespace UnityCore
 
             #endregion Public Methods
 
+            // Edit Button Events
+            public void OnClickMove() => _objectEditState = ObjectEditState.Move;
+            public void OnClickRotate() => _objectEditState = ObjectEditState.Rotate;
+            public void OnClickScale() => _objectEditState = ObjectEditState.Scale;
+            public void OnClickClose()
+            {
+                HideCloseButton();
+                _objectEditState = ObjectEditState.WaitForMenuSelect;
+            } // End of OnClickClose
+
             #region Private Methods
 
             private void Initialize()
@@ -116,10 +126,13 @@ namespace UnityCore
                         WaitForMenuSelect();
                         break;
                     case ObjectEditState.Move:
+                        MoveObject();
                         break;
                     case ObjectEditState.Rotate:
+                        RotateObject();
                         break;
                     case ObjectEditState.Scale:
+                        ScaleObject();
                         break;
                 }
             } // End of ObjectControl
@@ -146,6 +159,21 @@ namespace UnityCore
                 
                 UnSelectTarget();
             } // End of WaitForMenuSelect
+            private void MoveObject()
+            {
+                HideEditButtons();
+                
+            } // End of MoveObject
+            private void RotateObject()
+            {
+                HideEditButtons();
+                
+            } // End of RotateObject
+            private void ScaleObject()
+            {
+                HideEditButtons();
+                
+            } // End of ScaleObject
 
 
             // Ray
@@ -264,7 +292,8 @@ namespace UnityCore
                 var newPosition = new Vector3(targetPosition.x, targetPosition.y - extents.y, targetPosition.z) ;
                 
                 // Scale
-                var newScale = new Vector3(extents.x * 2.0f, 1.0f, extents.z * 2.0f);
+                var multipleValue = extents.x >= extents.z ? extents.x : extents.z;
+                var newScale = new Vector3(multipleValue * 2.0f, 1.0f, multipleValue * 2.0f);
                     
                 indicatorTransform.position = newPosition;
                 indicatorTransform.localScale = newScale;
@@ -272,6 +301,26 @@ namespace UnityCore
 
             } // End of AdjustIndicatorProportion
 
+            // Edit UI Button
+            private void ShowEditButtons()
+            {
+                
+            } // End of ShowEditButtons
+            private void HideEditButtons()
+            {
+                
+                ShowCloseButton();
+            } // End of HideEditButtons
+            private void ShowCloseButton()
+            {
+                
+            } // End of ShowCloseButton
+            private void HideCloseButton()
+            {
+                ShowEditButtons();
+                
+            } // End of HideCloseButton
+            
             #endregion
         }
     }
