@@ -1,3 +1,4 @@
+using GlobalType;
 using UnityEngine;
 
 namespace UnityCore
@@ -11,8 +12,9 @@ namespace UnityCore
             // Public Variables
             public static EffectController Instance;
 
+            public DebugModeType DebugMode = DebugModeType.Global;
             // Private Variables
-    
+
             #endregion Variables
 
             #region Unity Methods
@@ -32,7 +34,7 @@ namespace UnityCore
             #region Public Methods
 
             #endregion Public Methods
-    
+
             #region Private Methods
 
             private void Configure()
@@ -40,22 +42,23 @@ namespace UnityCore
                 Instance = this;
             } // End of Configure
 
+            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
+
             private void Log(string msg)
             {
-                if(!GameSetting.Instance.DebugMode) return;
-                        
-                Debug.Log("[Effect Controller]: " + msg);
+                if (CheckDebugMode) return;
+
+                Debug.Log("[]: " + msg);
             }
-            
+
             private void LogWarning(string msg)
             {
-                if(!GameSetting.Instance.DebugMode) return;
-                        
-                Debug.Log("[Effect Controller]: " + msg);
+                if (CheckDebugMode) return;
+
+                Debug.Log("[]: " + msg);
             }
-    
+
             #endregion Private Methods
         }
     }
 }
-
