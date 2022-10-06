@@ -9,7 +9,6 @@ namespace UnityCore
     namespace ObjectController
     {
         public enum ObjectEditState { FindControlTarget, WaitForMenuSelect, Move, Rotate, Scale }
-        public enum InputType { Mouse, Touch }
 
         [RequireComponent(typeof(Camera))]
         public class ObjectController : MonoBehaviour
@@ -129,18 +128,23 @@ namespace UnityCore
                 if (_selectedTarget) return;
 
                 if (!GetTargetFromInputPosition()) return;
+                Log("Select object : " + _selectedTarget.name);
 
                 ShowControlUI();
-                Log("Select object : " + _selectedTarget.name);
+                _objectEditState = ObjectEditState.WaitForMenuSelect;
             } // End of GetControlTarget
             private void WaitForMenuSelect()
             {
                 if (!ScreenTouch) return;
 
-                if (!GetTargetFromInputPosition())
+                // If Choose 
+                if (GetTargetFromInputPosition())
                 {
-                    UnSelectTarget();
+                    UpdateIndicator();
+                    return;
                 }
+                
+                UnSelectTarget();
             } // End of WaitForMenuSelect
 
 
@@ -205,8 +209,6 @@ namespace UnityCore
             private void ShowControlUI()
             {
                 UpdateIndicator();
-
-                _objectEditState = ObjectEditState.WaitForMenuSelect;
             } // End of ShowControlUI
 
             // Indicator
@@ -221,34 +223,54 @@ namespace UnityCore
                     _indicatorPrefab.InstantiateAsync().Completed += (op) =>
                     {
                         _indicator = op.Result.transform;
+                        EnableIndicator();
+                        return;
                     };
                 }
 
                 if (!_indicator) return;
-
+                
+                _indicator.gameObject.SetActive(false);
+                _indicator.SetParent(null);
                 EnableIndicator();
             } // End of UpdateIndicator
             private void EnableIndicator()
             {
-                // Set Position
-                var indicatorTransform = _indicator.transform;
-
-                indicatorTransform.position = _selectedTarget.position;
-                indicatorTransform.parent = _selectedTarget.transform;
-                
-                // Set Scale
-                var bounds = _selectedTarget.GetComponent<MeshRenderer>().bounds;
-                Log("Bounds Size : " + bounds.size);
-
+                AdjustIndicatorProportion();
                 _indicator.gameObject.SetActive(true);
-            } // End of AdjustIndicatorProportionToSelectedTarget
+            } // End of EnableIndicator
             private void DisableIndicator()
             {
                 if (!_indicator) return;
 
+                Log("Disable Indicator");
                 _indicator.gameObject.SetActive(false);
                 _indicator.SetParent(null);
             } // End of DisableIndicator
+            private void AdjustIndicatorProportion()
+            {
+                var indicatorTransform = _indicator.transform;
+                var targetPosition = _selectedTarget.position;
+                var targetExtents = _selectedTarget.GetComponent<MeshFilter>().mesh.bounds.extents;
+
+                // Calculate - Get world scale extents
+                var extents = _selectedTarget.TransformVector(targetExtents);
+                extents.x = Mathf.Abs(extents.x);
+                extents.y = Mathf.Abs(extents.y);
+                extents.z = Mathf.Abs(extents.z);
+                Log("extents.x : " + extents.x + "extents.y : " + extents.y + "extents.z : " + extents.z );
+
+                // Position
+                var newPosition = new Vector3(targetPosition.x, targetPosition.y - extents.y, targetPosition.z) ;
+                
+                // Scale
+                var newScale = new Vector3(extents.x * 2.0f, 1.0f, extents.z * 2.0f);
+                    
+                indicatorTransform.position = newPosition;
+                indicatorTransform.localScale = newScale;
+                indicatorTransform.parent = _selectedTarget.transform;
+
+            } // End of AdjustIndicatorProportion
 
             #endregion
         }

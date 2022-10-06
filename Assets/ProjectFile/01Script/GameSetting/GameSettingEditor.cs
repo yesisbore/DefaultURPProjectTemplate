@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
 
 [CustomEditor(typeof(GameSetting))]
@@ -12,3 +10,4 @@ public class GameSettingEditor : Editor
         Selection.activeObject = GameSetting.Instance;
     } // End of OpenInspector
 } // End of GameSettingEditor
+#endif
