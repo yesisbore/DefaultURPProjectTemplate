@@ -6,12 +6,12 @@ using UnityEngine.AddressableAssets;
 
 namespace UnityCore
 {
-    namespace ObjectController
+    namespace ObjectEditor
     {
         public enum ObjectEditState { FindControlTarget, WaitForMenuSelect, Move, Rotate, Scale }
 
         [RequireComponent(typeof(Camera))]
-        public class ObjectController : MonoBehaviour
+        public class ObjectEditor : MonoBehaviour
         {
             #region Variables
 
