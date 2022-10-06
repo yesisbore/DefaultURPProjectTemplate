@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using GlobalType;
 using UnityCore.Scnene;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -31,6 +32,13 @@ namespace UnityCore
     #endregion Singleton
     
     #region Variables
+    
+    // Public Variables
+        
+    public DebugModeType DebugMode = DebugModeType.Global;
+    
+    
+    // Private Variables
     
     private string _fadePrefab = "Fade UI";
     
@@ -176,16 +184,17 @@ namespace UnityCore
         Destroy(gameObject);
     } // End of SceneLoaded
     
+    private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     private void Log(string msg)
-    { 
-        if(!GameSetting.Instance.DebugMode) return;
+    {
+        if(CheckDebugMode) return;
         
         Debug.Log("[Scene Controller]: " + msg);
     }
     
     private void LogWarning(string msg)
     {
-        if(!GameSetting.Instance.DebugMode) return;
+        if(CheckDebugMode) return;
         
         Debug.Log("[Scene Controller]: " + msg);
     }

@@ -1,3 +1,4 @@
+using GlobalType;
 using UnityCore.Audio;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class AudioSetting : MonoBehaviour
 
     //Public Variables
     
+    public DebugModeType DebugMode = DebugModeType.Global;
     
     // Private Variables
     
@@ -29,16 +31,17 @@ public class AudioSetting : MonoBehaviour
     
     #region Private Methods
     
+    private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     private void Log(string msg)
     {
-        if(!GameSetting.Instance.DebugMode) return;
+        if(CheckDebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }
     
     private void LogWarning(string msg)
     {
-        if(!GameSetting.Instance.DebugMode) return;
+        if(CheckDebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }

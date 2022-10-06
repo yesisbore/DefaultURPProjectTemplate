@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using GlobalType;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -12,8 +13,10 @@ namespace UnityCore
             #region Variables
 
             // Public Variables
+            
             public static AudioController Instance;
 
+            public DebugModeType DebugMode = DebugModeType.Global;
             public AudioTrack[] Tracks;
             
             // Private Variables
@@ -46,7 +49,6 @@ namespace UnityCore
             } // End of Unity - OnDisable
 
             #endregion Unity Methods
-
             
             #region Public Methods
 
@@ -292,16 +294,17 @@ namespace UnityCore
                 _jobTable.Remove(type);
             } // End of RemoveJob
             
+            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
             private void Log(string msg)
             {
-                if(!GameSetting.Instance.DebugMode) return;
+                if(CheckDebugMode) return;
                 
                 Debug.Log("[Audio Controller]: " + msg);
             }
 
             private void LogWarning(string msg)
             {
-                if(!GameSetting.Instance.DebugMode) return;
+                if(CheckDebugMode) return;
                 
                 Debug.Log("[Audio Controller]: " + msg);
             }

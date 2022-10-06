@@ -8,7 +8,7 @@ namespace TestScript
     {
         #region Variables
 
-
+        public string Info = "This script is test for scene controller";
         #endregion Variables
 
         #region Help Methods

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using GlobalType;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 
@@ -17,6 +18,7 @@ namespace UnityCore
 
             // Public Variables
 
+            public DebugModeType DebugMode = DebugModeType.Global;
 
             // Private Variables
 
@@ -170,15 +172,16 @@ namespace UnityCore
             
             
             // Debug Process 
+            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
             private void Log(string msg)
             {
-                if (!GameSetting.Instance.DebugMode) return;
+                if(CheckDebugMode) return;
 
                 Debug.Log("[Object Controller]: " + msg);
             }
             private void LogWarning(string msg)
             {
-                if (!GameSetting.Instance.DebugMode) return;
+                if(CheckDebugMode) return;
 
                 Debug.Log("[Object Controller]: " + msg);
             }

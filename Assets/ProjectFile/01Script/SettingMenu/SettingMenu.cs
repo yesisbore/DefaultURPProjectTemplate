@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityCore.Audio;
+using GlobalType;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +8,8 @@ public class SettingMenu : MonoBehaviour
 
     //Public Variables
 
+    public DebugModeType DebugMode = DebugModeType.Global;
+    
     // Private Variables
 
     [Header("Audio Setting Sliders")] 
@@ -63,16 +63,17 @@ public class SettingMenu : MonoBehaviour
     } // End of AddEvent
     
 
+    private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     private void Log(string msg)
     {
-        if(!GameSetting.Instance.DebugMode) return;
+        if(CheckDebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }
     
     private void LogWarning(string msg)
     {
-        if(!GameSetting.Instance.DebugMode) return;
+        if(CheckDebugMode) return;
                 
         Debug.Log("[Setting Menu]: " + msg);
     }
