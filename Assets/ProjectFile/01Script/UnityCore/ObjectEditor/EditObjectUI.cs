@@ -1,6 +1,7 @@
 using GlobalType;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.UI;
 
 namespace UnityCore
 {
@@ -15,71 +16,93 @@ namespace UnityCore
             // Public Variables
             
             // Private Variables
-            [SerializeField] private ObjectEditState _objectEditState = ObjectEditState.WaitForMenuSelect;
-            [SerializeField] private string _indicatorName = "Indicator";
+            [Header("Prefab")]
+            [SerializeField] private AssetReference _indicatorPrefab;
 
-            private Transform _indicator;
+            [Header("Children")] 
+            [SerializeField] private RectTransform _editUI;
+            [SerializeField] private RectTransform _closeUI;
+            
+            private Button[] _editButtons;
+            private Button _closeButton;
+            private ObjectEditor _objectEditor;
             private EditObject _editObject;
             private Transform _mainUI;
-            private RectTransform _editUI;
+            private Transform _indicator;
 
             #endregion Variables
 
-            #region Unity Methods
-
-            private void Update()
-            {
-                //ObjectControl();
-            } // End of Unity - Update
-
-            #endregion Unity Methods
-
             #region Public Methods
 
+            public void SetEditor(ObjectEditor editor) => _objectEditor = editor;
             public void UpdateEditObject(EditObject editObject)
             {
                 Log("Update Edit Object");
 
                 _editObject = editObject;
                 this.gameObject.name = _editObject.name + " - Edit UI";
+
+                SetButtonEvents();
                 UpdateProcess();
             } // End of UpdateEditObject
 
-            public void OnUI()
+            public void ShowUI()
             {
                 gameObject.SetActive(true);
-            } // End of OnUI
+            }
 
-            public void OffUI()
+            public void HideUI()
             {
+                DeactivateIndicator();
                 gameObject.SetActive(false);
-            } // End of OffUI
-            
+            }
+
             // Edit Button Events
-            public void OnClickMove() => _editObject.SetEditState(_objectEditState = ObjectEditState.Move);
-            public void OnClickRotate() => _editObject.SetEditState(_objectEditState = ObjectEditState.Rotate);
-            public void OnClickScale() => _editObject.SetEditState(_objectEditState = ObjectEditState.Scale);
-            public void OnClickClose()
+            private void OnClickMove()
             {
-                HideCloseButton();
-                _editObject.SetEditState(_objectEditState = ObjectEditState.WaitForMenuSelect);
+                HideEditUI();
+                _objectEditor.MoveObject();
+            } // End of OnClickMove
+            private void OnClickRotate()
+            {
+                HideEditUI();
+                _objectEditor.RotateObject();
+            } // End of OnClickRotate
+            private void OnClickScale()
+            {
+                HideEditUI();
+                _objectEditor.ScaleObject();
+            } // End of OnClickScale
+            private void OnClickClose()
+            {
+                HideCloseUI();
+                _objectEditor.StopEditing();
             } // End of OnClickClose
-            
-            
-            
+
             #endregion Public Methods
 
             #region Private Methods
 
-
-
+            private void SetButtonEvents()
+            {
+                GetButtons();
+                
+                _editButtons[0].onClick.AddListener(OnClickMove);
+                _editButtons[1].onClick.AddListener(OnClickRotate);
+                _editButtons[2].onClick.AddListener(OnClickScale);
+                _closeButton.onClick.AddListener(OnClickClose);
+            } // End of SetButtonEvents
+            private void GetButtons()
+            {
+               _editButtons = _editUI.GetComponentsInChildren<Button>(true);
+               _closeButton = _closeUI.GetComponentInChildren<Button>(true);
+            } // End of GetButtons
             private void UpdateProcess()
             {
                 GetMainUI();
                 ActivateIndicator();
-                OnUI();
+                ShowEditUI();
             } // End of GetComponents
-
             private void GetMainUI()
             {
                 if(_mainUI) return;
@@ -88,7 +111,7 @@ namespace UnityCore
                 this.transform.SetParent(_mainUI);
                 Log("Get Main UI : " + _mainUI.name);
             } // End of GetMainUI
-            
+
             // Indicator
             private void ActivateIndicator()
             {
@@ -101,32 +124,28 @@ namespace UnityCore
                 }
                 UpdateIndicator();
             } // End of ActivateIndicator
-
             private void DeactivateIndicator()
             {
                 if (!_indicator) return;
-                
+
                 Log("Deactivate Indicator");
                 _indicator.gameObject.SetActive(false);
                 _indicator.SetParent(null);
             } // End of DeactivateIndicator
-            
             private void SpawnIndicator()
             {
-                Addressables.InstantiateAsync(_indicatorName).Completed += (op) =>
+                _indicatorPrefab.InstantiateAsync().Completed += (op) =>
                 {
                     _indicator = op.Result.transform;
                     UpdateIndicator();
                 };
             } // End of SpawnIndicator
-            
             private void UpdateIndicator()
             {
                 DeactivateIndicator();
                 AdjustIndicatorProportion();
                 _indicator.gameObject.SetActive(true);
             } // End of UpdateIndicator
-
             private void AdjustIndicatorProportion()
             {
                 var indicatorTransform = _indicator.transform;
@@ -153,74 +172,41 @@ namespace UnityCore
                 indicatorTransform.parent = _editObject.transform;
                 
             } // End of AdjustIndicatorProportion
-            
-
-
-            
-            // Edit State
-            private void ObjectControl()
-            {
-                switch (_objectEditState)
-                {
-                    case ObjectEditState.Move:
-                        MoveObject();
-                        break;
-                    case ObjectEditState.Rotate:
-                        RotateObject();
-                        break;
-                    case ObjectEditState.Scale:
-                        ScaleObject();
-                        break;
-                }
-            } // End of ObjectControl
-
-            private void MoveObject()
-            {
-                HideEditButtons();
-            } // End of MoveObject
-
-            private void RotateObject()
-            {
-                HideEditButtons();
-            } // End of RotateObject
-
-            private void ScaleObject()
-            {
-                HideEditButtons();
-            } // End of ScaleObject
-
-
-
-
 
             // Edit UI Button
-            private void ShowEditButtons()
+            private void ShowEditUI()
             {
+                _editUI.gameObject.SetActive(true);
             } // End of ShowEditButtons
-
-            private void HideEditButtons()
+            
+            private void HideEditUI()
             {
-                ShowCloseButton();
+                _editUI.gameObject.SetActive(false);
+
+                ShowCloseUI();
             } // End of HideEditButtons
 
-            private void ShowCloseButton()
+            private void ShowCloseUI()
             {
+                _closeUI.gameObject.SetActive(true);
             } // End of ShowCloseButton
 
-            private void HideCloseButton()
+            private void HideCloseUI()
             {
-                ShowEditButtons();
+                _closeUI.gameObject.SetActive(false);
+
+                ShowEditUI();
             } // End of HideCloseButton
 
+            
+            // Debug
             private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-
             private void Log(string msg)
             {
                 if (CheckDebugMode) return;
 
                 Debug.Log("[EditObject UI]: " + msg);
             }
-
             private void LogWarning(string msg)
             {
                 if (CheckDebugMode) return;

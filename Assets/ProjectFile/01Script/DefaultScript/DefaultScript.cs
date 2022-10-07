@@ -42,7 +42,8 @@
     // }
     //     Destroy(gameObject);
     // } // End of CO_Move
-
+ 
+    // // Debug 
     // private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     // private void Log(string msg)
     // {

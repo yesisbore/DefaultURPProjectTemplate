@@ -6,7 +6,7 @@ public class GameSetting : SingletonScriptableObject<GameSetting>
     public bool DebugMode = false;
     
     [Header("Play Setting")]
-    public string name = "";
+    //public string name = "";
 
     public TargetResolution TargetResolution = GlobalType.TargetResolution.FHD;
 

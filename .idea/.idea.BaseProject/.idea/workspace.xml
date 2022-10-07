@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/Indicator.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/Indicator.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup/UI/EditObject UI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup/UI/EditObject UI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup/UI/Fade UI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/LocalGroup/UI/Fade UI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/RemoteGroup.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/M_Indicator.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Material/M_Indicator.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 Default Scene.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +58,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665069384032</updated>
-      <workItem from="1665069394066" duration="304000" />
+      <workItem from="1665069394066" duration="699000" />
+      <workItem from="1665145771829" duration="8638000" />
     </task>
     <servers />
   </component>
