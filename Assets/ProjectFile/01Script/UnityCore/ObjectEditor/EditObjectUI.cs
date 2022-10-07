@@ -32,6 +32,15 @@ namespace UnityCore
 
             #endregion Variables
 
+            #region Unity Methods
+
+            private void Update()
+            {
+                FollowEditObject();
+            } // End of Unity - Update
+
+            #endregion Unity Methods
+            
             #region Public Methods
 
             public void SetEditor(ObjectEditor editor) => _objectEditor = editor;
@@ -49,13 +58,13 @@ namespace UnityCore
             public void ShowUI()
             {
                 gameObject.SetActive(true);
-            }
+            } // End of ShowUI
 
             public void HideUI()
             {
                 DeactivateIndicator();
                 gameObject.SetActive(false);
-            }
+            } // End of HideUI
 
             // Edit Button Events
             private void OnClickMove()
@@ -112,6 +121,12 @@ namespace UnityCore
                 Log("Get Main UI : " + _mainUI.name);
             } // End of GetMainUI
 
+            private void FollowEditObject()
+            {
+                if(!_editObject) return;
+                
+            } // End of FollowEditObject
+            
             // Indicator
             private void ActivateIndicator()
             {

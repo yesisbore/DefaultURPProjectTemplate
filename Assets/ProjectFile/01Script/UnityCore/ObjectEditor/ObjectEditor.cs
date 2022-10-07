@@ -30,7 +30,6 @@ namespace UnityCore
             private EditObjectUI _editObjectUI;
             private EditObject _selectedEditObject;
             private Camera _camera;
-            private float _maxDistance = float.MaxValue;
 
             // Input 
             private Vector2 InputPosition
@@ -182,7 +181,7 @@ namespace UnityCore
 
                 var ray = _camera.ScreenPointToRay(InputPosition);
 
-                if (!Physics.Raycast(ray, out var hit, _maxDistance, _targetLayer)) {return false;}
+                if (!Physics.Raycast(ray, out var hit, float.MaxValue, _targetLayer)) {return false;}
                 Log("Hit object : " + hit.transform.name);
 
                 if (_selectedEditObject)
@@ -201,6 +200,27 @@ namespace UnityCore
                 _objectEditState = ObjectEditState.FindControlTarget;
             } // End of UnSelectTarget
 
+            // UI
+            private void ShowEditUI()
+            {
+                if (!_editObjectUI)
+                {
+                    SpawnEditUI();
+                    return;
+                }
+                _editObjectUI.ShowUI();
+                _editObjectUI.UpdateEditObject(_selectedEditObject);
+            } // End of ShowEditUI
+            private void SpawnEditUI()
+            {
+                _editObjectUIPrefab.InstantiateAsync().Completed += (op) =>
+                {
+                    _editObjectUI = op.Result.GetComponent<EditObjectUI>();
+                    _editObjectUI.SetEditor(this);
+                    _editObjectUI.UpdateEditObject(_selectedEditObject);
+                };
+            } // End of SpawnEditUI
+            
             // Debug 
             private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
             private void Log(string msg)
@@ -229,30 +249,6 @@ namespace UnityCore
             }
 
             #endregion Private Methods
-
-            #region UI Methods
-
-            private void ShowEditUI()
-            {
-                if (!_editObjectUI)
-                {
-                    SpawnEditUI();
-                    return;
-                }
-                _editObjectUI.ShowUI();
-                _editObjectUI.UpdateEditObject(_selectedEditObject);
-            } // End of ShowEditUI
-            private void SpawnEditUI()
-            {
-                _editObjectUIPrefab.InstantiateAsync().Completed += (op) =>
-                {
-                    _editObjectUI = op.Result.GetComponent<EditObjectUI>();
-                    _editObjectUI.SetEditor(this);
-                    _editObjectUI.UpdateEditObject(_selectedEditObject);
-                };
-            } // End of SpawnEditUI
-            
-            #endregion
         }
     }
 }
