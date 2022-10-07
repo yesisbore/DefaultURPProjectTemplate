@@ -1,10 +1,14 @@
+using GlobalType;
 using UnityEngine;
 
 public class GameSetting : SingletonScriptableObject<GameSetting>
 {
     public bool DebugMode = false;
     
+    [Header("Play Setting")]
     public string name = "";
+
+    public TargetResolution TargetResolution = GlobalType.TargetResolution.FHD;
 
     [Header("Volume Setting")] 
     [Range(0.0f,1.0f)]

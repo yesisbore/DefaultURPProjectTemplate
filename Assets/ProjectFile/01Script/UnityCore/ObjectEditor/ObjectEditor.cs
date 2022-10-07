@@ -21,13 +21,19 @@ namespace UnityCore
 
             // Private Variables
 
-            [Header("Prefab")] [SerializeField] private AssetReference _indicatorPrefab;
+            [Header("Prefab")] 
+            [SerializeField] private AssetReference _indicatorPrefab;
 
-            [Header("Settings")] [SerializeField] private InputType _useInput = InputType.Mouse;
+            [Header("Settings")] 
+            [SerializeField] private InputType _useInput = InputType.Mouse;
             [SerializeField] private LayerMask _targetLayer;
             [SerializeField] private ObjectEditState _objectEditState = ObjectEditState.FindControlTarget;
 
-            private Transform _selectedTarget;
+            [SerializeField] private string _editObjectUIName = "EditObject UI";
+
+            [SerializeField] private EditObjectUI _editObjectUI;
+            
+            private EditObject _selectedEditObject;
             private Transform _indicator;
             private Camera _camera;
             private bool _ownIndicator = false;
@@ -90,17 +96,9 @@ namespace UnityCore
 
             #region Public Methods
 
+            public void SetEditState(ObjectEditState state) => _objectEditState = state;
+            
             #endregion Public Methods
-
-            // Edit Button Events
-            public void OnClickMove() => _objectEditState = ObjectEditState.Move;
-            public void OnClickRotate() => _objectEditState = ObjectEditState.Rotate;
-            public void OnClickScale() => _objectEditState = ObjectEditState.Scale;
-            public void OnClickClose()
-            {
-                HideCloseButton();
-                _objectEditState = ObjectEditState.WaitForMenuSelect;
-            } // End of OnClickClose
 
             #region Private Methods
 
@@ -125,25 +123,16 @@ namespace UnityCore
                     case ObjectEditState.WaitForMenuSelect:
                         WaitForMenuSelect();
                         break;
-                    case ObjectEditState.Move:
-                        MoveObject();
-                        break;
-                    case ObjectEditState.Rotate:
-                        RotateObject();
-                        break;
-                    case ObjectEditState.Scale:
-                        ScaleObject();
-                        break;
                 }
             } // End of ObjectControl
             private void FindControlTarget()
             {
-                if (_selectedTarget) return;
+                if (_selectedEditObject) return;
 
                 if (!GetTargetFromInputPosition()) return;
-                Log("Select object : " + _selectedTarget.name);
+                Log("Select object : " + _selectedEditObject.name);
 
-                ShowControlUI();
+                ShowEditUI();
                 _objectEditState = ObjectEditState.WaitForMenuSelect;
             } // End of GetControlTarget
             private void WaitForMenuSelect()
@@ -159,21 +148,6 @@ namespace UnityCore
                 
                 UnSelectTarget();
             } // End of WaitForMenuSelect
-            private void MoveObject()
-            {
-                HideEditButtons();
-                
-            } // End of MoveObject
-            private void RotateObject()
-            {
-                HideEditButtons();
-                
-            } // End of RotateObject
-            private void ScaleObject()
-            {
-                HideEditButtons();
-                
-            } // End of ScaleObject
 
 
             // Ray
@@ -192,12 +166,16 @@ namespace UnityCore
                 if (!Physics.Raycast(ray, out var hit, _maxDistance, _targetLayer)) return false;
                 Log("Hit object : " + hit.transform.name);
 
-                _selectedTarget = hit.transform;
+                _selectedEditObject = hit.transform.GetComponent<EditObject>();
+                if (!_selectedEditObject)
+                {
+                    _selectedEditObject = hit.transform.gameObject.AddComponent<EditObject>();
+                }
                 return true;
             } // End of GetTargetFromInputPosition
             private void UnSelectTarget()
             {
-                _selectedTarget = null;
+                _selectedEditObject = null;
                 DisableIndicator();
                 _objectEditState = ObjectEditState.FindControlTarget;
             } // End of UnSelectTarget
@@ -234,15 +212,32 @@ namespace UnityCore
 
             #region UI Methods
 
-            private void ShowControlUI()
+            private void ShowEditUI()
             {
-                UpdateIndicator();
-            } // End of ShowControlUI
+                _editObjectUI = FindObjectOfType<EditObjectUI>();
+                
+                if (!_editObjectUI)
+                {
+                    SpawnEditUI();
+                    return;
+                }
 
+                _editObjectUI.UpdateEditObject(_selectedEditObject);
+            } // End of ShowEditUI
+
+            private void SpawnEditUI()
+            {
+                Addressables.InstantiateAsync(_editObjectUIName).Completed += (op) =>
+                {
+                    _editObjectUI = op.Result.GetComponent<EditObjectUI>();
+                    _editObjectUI.UpdateEditObject(_selectedEditObject);
+                };
+            } // End of SpawnEditUI
+            
             // Indicator
             private void UpdateIndicator()
             {
-                if (!_selectedTarget) return;
+                if (!_selectedEditObject) return;
 
                 if (!_ownIndicator)
                 {
@@ -278,11 +273,12 @@ namespace UnityCore
             private void AdjustIndicatorProportion()
             {
                 var indicatorTransform = _indicator.transform;
-                var targetPosition = _selectedTarget.position;
-                var targetExtents = _selectedTarget.GetComponent<MeshFilter>().mesh.bounds.extents;
+                var targetTransform = _selectedEditObject.transform;
+                var targetPosition = targetTransform.position;
+                var targetExtents = targetTransform.GetComponent<MeshFilter>().mesh.bounds.extents;
 
                 // Calculate - Get world scale extents
-                var extents = _selectedTarget.TransformVector(targetExtents);
+                var extents = targetTransform.TransformVector(targetExtents);
                 extents.x = Mathf.Abs(extents.x);
                 extents.y = Mathf.Abs(extents.y);
                 extents.z = Mathf.Abs(extents.z);
@@ -297,30 +293,10 @@ namespace UnityCore
                     
                 indicatorTransform.position = newPosition;
                 indicatorTransform.localScale = newScale;
-                indicatorTransform.parent = _selectedTarget.transform;
+                indicatorTransform.parent = _selectedEditObject.transform;
 
             } // End of AdjustIndicatorProportion
 
-            // Edit UI Button
-            private void ShowEditButtons()
-            {
-                
-            } // End of ShowEditButtons
-            private void HideEditButtons()
-            {
-                
-                ShowCloseButton();
-            } // End of HideEditButtons
-            private void ShowCloseButton()
-            {
-                
-            } // End of ShowCloseButton
-            private void HideCloseButton()
-            {
-                ShowEditButtons();
-                
-            } // End of HideCloseButton
-            
             #endregion
         }
     }
