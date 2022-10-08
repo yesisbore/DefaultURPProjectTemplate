@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 802443325142345137}
   - component: {fileID: 7159299422542973314}
   m_Layer: 5
-  m_Name: EditObject UI
+  m_Name: FloaingPopUp UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 802443325142345139}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19f7586dbbc79cb478b0dbc493b8207d, type: 3}
+  m_Script: {fileID: 11500000, guid: c6ddaa91d3ba749bab59da2acbdc8ce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DebugMode: 0

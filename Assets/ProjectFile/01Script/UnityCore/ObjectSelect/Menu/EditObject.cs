@@ -6,7 +6,7 @@ using UnityEngine.AddressableAssets;
 
 namespace UnityCore
 {
-    namespace ObjectEditor
+    namespace ObjectSelect
     {
         public class EditObject : MonoBehaviour
         {
@@ -17,9 +17,9 @@ namespace UnityCore
             // Public Variables
 
             // Private Variables
-            [SerializeField] private ObjectEditState _objectEditState = ObjectEditState.WaitForMenuSelect;
+            [SerializeField] private ObjectEditState _objectEditState = ObjectEditState.None;
             private Transform _mainUI;
-            private EditObjectUI _editObjectUI;
+            private FloaingPopUpUI _floaingPopUpUI;
 
             #endregion Variables
 
@@ -42,7 +42,7 @@ namespace UnityCore
             
             public void StopEditing()
             {
-                _objectEditState = ObjectEditState.WaitForMenuSelect;
+                _objectEditState = ObjectEditState.None;
             }
             
             #endregion Public Methods
@@ -65,6 +65,8 @@ namespace UnityCore
             {
                 switch (_objectEditState)
                 {
+                    case ObjectEditState.None:
+                        break;
                     case ObjectEditState.Move:
                         MoveObject();
                         break;

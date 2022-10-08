@@ -5,29 +5,25 @@ using UnityEngine.EventSystems;
 
 namespace UnityCore
 {
-    namespace ObjectEditor
+    namespace ObjectSelect
     {
-        public enum ObjectEditState { FindControlTarget, WaitForMenuSelect, Move, Rotate, Scale }
-
         [RequireComponent(typeof(Camera))]
-        public class ObjectEditor : MonoBehaviour
+        public class ObjectSelector : MonoBehaviour
         {
             #region Variables
 
             public DebugModeType DebugMode = DebugModeType.Global;
 
             // Public Variables
-            
-            // Private Variables
-            [Header("Prefab")] 
-            [SerializeField] private AssetReference _editObjectUIPrefab;
 
-            [Header("Settings")] 
-            [SerializeField] private InputType _useInput = InputType.Mouse;
+            // Private Variables
+            [Header("Prefab")] [SerializeField] private AssetReference _editObjectUIPrefab;
+
+            [Header("Settings")] [SerializeField] private InputType _useInput = InputType.Mouse;
             [SerializeField] private LayerMask _targetLayer;
-            [SerializeField] private ObjectEditState _objectEditState = ObjectEditState.FindControlTarget;
-            
-            private EditObjectUI _editObjectUI;
+            [SerializeField] private ObjectSelectorState _objectEditState = ObjectSelectorState.FindControlTarget;
+
+            private FloaingPopUpUI _floaingPopUpUI;
             private EditObject _selectedEditObject;
             private Camera _camera;
 
@@ -41,12 +37,13 @@ namespace UnityCore
                         case InputType.Mouse:
                             return Input.mousePosition;
                         case InputType.Touch:
-                            return Input.GetTouch(0).position;  
+                            return Input.GetTouch(0).position;
                     }
 
                     return Vector2.zero;
                 }
             } // End of InputPosition
+
             private bool ScreenTouch
             {
                 get
@@ -62,7 +59,7 @@ namespace UnityCore
                     return false;
                 }
             } // End of ScreenTouch
-            
+
             #endregion Variables
 
             #region Unity Methods
@@ -71,6 +68,7 @@ namespace UnityCore
             {
                 Initialize();
             } // End of Unity - Start
+
             private void Update()
             {
                 DebugRay();
@@ -85,32 +83,35 @@ namespace UnityCore
             public void MoveObject()
             {
                 Log("Move Object");
-                
-                _objectEditState = ObjectEditState.Move;
+
+                _objectEditState = ObjectSelectorState.Editing;
                 _selectedEditObject.Move();
             } // End of MoveObject
+
             public void RotateObject()
             {
                 Log("Rotate Object");
-                
-                _objectEditState = ObjectEditState.Rotate;
+
+                _objectEditState = ObjectSelectorState.Editing;
                 _selectedEditObject.Rotate();
             } // End of RotateObject
+
             public void ScaleObject()
             {
                 Log("Scale Object");
 
-                _objectEditState = ObjectEditState.Scale;
+                _objectEditState = ObjectSelectorState.Editing;
                 _selectedEditObject.Scale();
             } // End of ScaleObject
+
             public void StopEditing()
             {
                 Log("Stop Editing");
 
-                _objectEditState = ObjectEditState.WaitForMenuSelect;
+                _objectEditState = ObjectSelectorState.WaitForMenuSelect;
                 _selectedEditObject.StopEditing();
             } // End of StopEditing
-            
+
             #endregion Public Methods
 
             #region Private Methods
@@ -119,6 +120,7 @@ namespace UnityCore
             {
                 GetComponents();
             } // End of Initialize
+
             private void GetComponents()
             {
                 _camera = GetComponent<Camera>();
@@ -129,14 +131,15 @@ namespace UnityCore
             {
                 switch (_objectEditState)
                 {
-                    case ObjectEditState.FindControlTarget:
+                    case ObjectSelectorState.FindControlTarget:
                         FindControlTarget();
                         break;
-                    case ObjectEditState.WaitForMenuSelect:
+                    case ObjectSelectorState.WaitForMenuSelect:
                         WaitForMenuSelect();
                         break;
                 }
             } // End of ObjectControl
+
             private void FindControlTarget()
             {
                 if (_selectedEditObject) return;
@@ -145,10 +148,11 @@ namespace UnityCore
                 Log("Select object : " + _selectedEditObject.name);
 
                 ShowEditUI();
-                _objectEditState = ObjectEditState.WaitForMenuSelect;
+                _objectEditState = ObjectSelectorState.WaitForMenuSelect;
             } // End of GetControlTarget
 
             private bool IsInputOnUI => EventSystem.current.IsPointerOverGameObject();
+
             private void WaitForMenuSelect()
             {
                 if (!ScreenTouch) return;
@@ -156,7 +160,7 @@ namespace UnityCore
                 // If Choose another object
                 if (GetTargetFromInputPosition())
                 {
-                    _editObjectUI.UpdateEditObject(_selectedEditObject);
+                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
                     return;
                 }
 
@@ -165,6 +169,7 @@ namespace UnityCore
                     Log("Input is On UI");
                     return;
                 }
+
                 UnSelectTarget();
             } // End of WaitForMenuSelect
 
@@ -181,67 +186,78 @@ namespace UnityCore
 
                 var ray = _camera.ScreenPointToRay(InputPosition);
 
-                if (!Physics.Raycast(ray, out var hit, float.MaxValue, _targetLayer)) {return false;}
+                if (!Physics.Raycast(ray, out var hit, float.MaxValue, _targetLayer))
+                {
+                    return false;
+                }
+
                 Log("Hit object : " + hit.transform.name);
 
                 if (_selectedEditObject)
                 {
                     Destroy(_selectedEditObject);
                 }
+
                 _selectedEditObject = hit.transform.gameObject.AddComponent<EditObject>();
                 return true;
             } // End of GetTargetFromInputPosition
+
             private void UnSelectTarget()
             {
                 Log("UnSelect Target");
                 Destroy(_selectedEditObject);
                 _selectedEditObject = null;
-                _editObjectUI.HideUI();
-                _objectEditState = ObjectEditState.FindControlTarget;
+                _floaingPopUpUI.HideUI();
+                _objectEditState = ObjectSelectorState.FindControlTarget;
             } // End of UnSelectTarget
 
             // UI
             private void ShowEditUI()
             {
-                if (!_editObjectUI)
+                if (!_floaingPopUpUI)
                 {
                     SpawnEditUI();
                     return;
                 }
-                _editObjectUI.ShowUI();
-                _editObjectUI.UpdateEditObject(_selectedEditObject);
+
+                _floaingPopUpUI.ShowUI();
+                _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
             } // End of ShowEditUI
+
             private void SpawnEditUI()
             {
                 _editObjectUIPrefab.InstantiateAsync().Completed += (op) =>
                 {
-                    _editObjectUI = op.Result.GetComponent<EditObjectUI>();
-                    _editObjectUI.SetEditor(this);
-                    _editObjectUI.UpdateEditObject(_selectedEditObject);
+                    _floaingPopUpUI = op.Result.GetComponent<FloaingPopUpUI>();
+                    _floaingPopUpUI.SetEditor(this);
+                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
                 };
             } // End of SpawnEditUI
-            
+
             // Debug 
             private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
+
             private void Log(string msg)
             {
-                if(CheckDebugMode) return;
+                if (CheckDebugMode) return;
 
                 Debug.Log("[Object Controller]: " + msg);
             }
+
             private void LogWarning(string msg)
             {
-                if(CheckDebugMode) return;
+                if (CheckDebugMode) return;
 
                 Debug.Log("[Object Controller]: " + msg);
             }
+
             private void DebugRay()
             {
                 if (!GameSetting.Instance.DebugMode) return;
                 if (!_camera) return;
 
                 var playerPos = transform.position;
-                var inputPos = (Vector3)InputPosition;
+                var inputPos = (Vector3) InputPosition;
                 inputPos.z = 10f;
 
                 inputPos = _camera.ScreenToWorldPoint(inputPos);

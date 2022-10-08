@@ -3,11 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/00 Default Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/00 Default Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/AddressableAssetsData/AssetGroups/Local Group.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/AddressableAssetsData/AssetGroups/Local Group.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/EditObjectUI.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectEditor/ObjectEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/EditObject UI.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/EditObject UI.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Editing.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Editing.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +31,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestEffect2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelector.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -48,12 +56,24 @@
       <option name="presentableId" value="Default" />
       <updated>1665069384032</updated>
       <workItem from="1665069394066" duration="699000" />
-      <workItem from="1665145771829" duration="9506000" />
+      <workItem from="1665145771829" duration="9675000" />
+      <workItem from="1665194947535" duration="1935000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

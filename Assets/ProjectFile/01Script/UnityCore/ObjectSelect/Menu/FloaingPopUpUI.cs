@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 namespace UnityCore
 {
-    namespace ObjectEditor
+    namespace ObjectSelect
     {
-        public class EditObjectUI : MonoBehaviour
+        public class FloaingPopUpUI : MonoBehaviour
         {
             #region Variables
 
@@ -25,7 +25,7 @@ namespace UnityCore
             
             private Button[] _editButtons;
             private Button _closeButton;
-            private ObjectEditor _objectEditor;
+            private ObjectSelector _objectSelector;
             private EditObject _editObject;
             private Transform _mainUI;
             private Transform _indicator;
@@ -43,7 +43,7 @@ namespace UnityCore
             
             #region Public Methods
 
-            public void SetEditor(ObjectEditor editor) => _objectEditor = editor;
+            public void SetEditor(ObjectSelector selector) => _objectSelector = selector;
             public void UpdateEditObject(EditObject editObject)
             {
                 Log("Update Edit Object");
@@ -70,22 +70,22 @@ namespace UnityCore
             private void OnClickMove()
             {
                 HideEditUI();
-                _objectEditor.MoveObject();
+                _objectSelector.MoveObject();
             } // End of OnClickMove
             private void OnClickRotate()
             {
                 HideEditUI();
-                _objectEditor.RotateObject();
+                _objectSelector.RotateObject();
             } // End of OnClickRotate
             private void OnClickScale()
             {
                 HideEditUI();
-                _objectEditor.ScaleObject();
+                _objectSelector.ScaleObject();
             } // End of OnClickScale
             private void OnClickClose()
             {
                 HideCloseUI();
-                _objectEditor.StopEditing();
+                _objectSelector.StopEditing();
             } // End of OnClickClose
 
             #endregion Public Methods

@@ -26,7 +26,7 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
   - m_GUID: dac6cb752c2a03e4fac40594f3d5f837
-    m_Address: EditObject UI
+    m_Address: FloaingPopUp UI
     m_ReadOnly: 0
     m_SerializedLabels: []
   m_ReadOnly: 0
