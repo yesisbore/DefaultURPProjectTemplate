@@ -10,6 +10,8 @@ public class GameSetting : SingletonScriptableObject<GameSetting>
 
     public TargetResolution TargetResolution = GlobalType.TargetResolution.FHD;
 
+    public DeviceTarget DeviceTarget = DeviceTarget.PC; 
+    
     [Header("Volume Setting")] 
     [Range(0.0f,1.0f)]
     public float VolumeMaster = 1.0f;

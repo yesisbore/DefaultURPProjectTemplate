@@ -1,4 +1,7 @@
+using System.Collections.Generic;
 using GlobalType;
+using Unity.Mathematics;
+using UnityCore.UI;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UI;
@@ -7,6 +10,7 @@ namespace UnityCore
 {
     namespace ObjectSelect
     {
+        [RequireComponent(typeof(RectTransform))]
         public class FloaingPopUpUI : MonoBehaviour
         {
             #region Variables
@@ -14,21 +18,25 @@ namespace UnityCore
             public DebugModeType DebugMode = DebugModeType.Global;
 
             // Public Variables
-            
+
             // Private Variables
-            [Header("Prefab")]
+            [Header("Settings")]
             [SerializeField] private AssetReference _indicatorPrefab;
 
             [Header("Children")] 
             [SerializeField] private RectTransform _editUI;
             [SerializeField] private RectTransform _closeUI;
-            
+
+            private FloatingPopUpUIPosition _floatingPopUpUIPosition ;
+            private MovableScreen _movableScreen;
+            private RectTransform _rootRect;
             private Button[] _editButtons;
             private Button _closeButton;
             private ObjectSelector _objectSelector;
-            private EditObject _editObject;
+            private Transform _editObject;
             private Transform _mainUI;
-            private Transform _indicator;
+            private Indicator _indicator;
+            private Camera _mainCamera;
 
             #endregion Variables
 
@@ -44,25 +52,24 @@ namespace UnityCore
             #region Public Methods
 
             public void SetEditor(ObjectSelector selector) => _objectSelector = selector;
-            public void UpdateEditObject(EditObject editObject)
+            public void UpdateEditObject(Transform editObject)
             {
                 Log("Update Edit Object");
 
                 _editObject = editObject;
                 this.gameObject.name = _editObject.name + " - Edit UI";
-
+                HideUI();
                 SetButtonEvents();
                 UpdateProcess();
             } // End of UpdateEditObject
-
-            public void ShowUI()
-            {
-                gameObject.SetActive(true);
-            } // End of ShowUI
-
+            
             public void HideUI()
             {
-                DeactivateIndicator();
+                if (_indicator)
+                {
+                    _indicator.DeactivateIndicator();
+                }
+                
                 gameObject.SetActive(false);
             } // End of HideUI
 
@@ -92,6 +99,73 @@ namespace UnityCore
 
             #region Private Methods
 
+            private void UpdateProcess()
+            {
+                GetComponents();
+                ActivateUI();
+                ActivateIndicator();
+            } // End of GetComponents
+            private void GetComponents()
+            {
+                if (_mainCamera == null)
+                {
+                    _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+                }
+
+                if (_rootRect == null)
+                {
+                    _rootRect = GetComponent<RectTransform>();
+                }
+                GetMainUI();
+            } // End of GetComponents
+            private void GetMainUI()
+            {
+                if(_mainUI) return;
+                
+                _mainUI = GameManager.GetMainUI().transform;
+                this.transform.SetParent(_mainUI);
+                Log("Get Main UI : " + _mainUI.name);
+            } // End of GetMainUI
+            private void ActivateUI()
+            {
+                InitializeUI();
+                ShowEditUI();
+                ShowUI();
+            } // End of ActivateUI
+
+            private void InitializeUI()
+            {
+                _rootRect.pivot = Vector2.zero;
+                _rootRect.anchoredPosition = Vector2.zero;
+                if (_movableScreen == null)
+                {
+                    _movableScreen = new MovableScreen(_rootRect.rect.size);
+                }
+                // 변경되면 삭제 후 초기화 필요 업데이트 계속 돌아가서 - 그냥 오브젝트 변경만 해도될듯 
+                if (_floatingPopUpUIPosition == null)
+                {
+                    _floatingPopUpUIPosition = new FloatingPopUpUIPosition(_editObject);
+                    return;
+                }
+                _floatingPopUpUIPosition.UpdateTargetObject(_editObject);
+            } // End of InitializeUI
+
+            private void ShowUI()
+            {
+                gameObject.SetActive(true);
+            } // End of ShowUI
+
+            private void FollowEditObject()
+            {
+                if(!_editObject || !_mainCamera) return;
+                
+                _rootRect.anchoredPosition = _mainCamera.WorldToScreenPoint(_floatingPopUpUIPosition.GetPosition(UIPositionType.UpperRight));
+            } // End of FollowEditObject
+            
+            #endregion Private Methods
+            
+            #region Menu Button
+            
             private void SetButtonEvents()
             {
                 GetButtons();
@@ -103,90 +177,9 @@ namespace UnityCore
             } // End of SetButtonEvents
             private void GetButtons()
             {
-               _editButtons = _editUI.GetComponentsInChildren<Button>(true);
-               _closeButton = _closeUI.GetComponentInChildren<Button>(true);
+                _editButtons = _editUI.GetComponentsInChildren<Button>(true);
+                _closeButton = _closeUI.GetComponentInChildren<Button>(true);
             } // End of GetButtons
-            private void UpdateProcess()
-            {
-                GetMainUI();
-                ActivateIndicator();
-                ShowEditUI();
-            } // End of GetComponents
-            private void GetMainUI()
-            {
-                if(_mainUI) return;
-                
-                _mainUI = GameManager.GetMainUI().transform;
-                this.transform.SetParent(_mainUI);
-                Log("Get Main UI : " + _mainUI.name);
-            } // End of GetMainUI
-
-            private void FollowEditObject()
-            {
-                if(!_editObject) return;
-                
-            } // End of FollowEditObject
-            
-            // Indicator
-            private void ActivateIndicator()
-            {
-                Log("Activate Indicator");
-
-                if (!_indicator)
-                {
-                    SpawnIndicator();
-                    return;
-                }
-                UpdateIndicator();
-            } // End of ActivateIndicator
-            private void DeactivateIndicator()
-            {
-                if (!_indicator) return;
-
-                Log("Deactivate Indicator");
-                _indicator.gameObject.SetActive(false);
-                _indicator.SetParent(null);
-            } // End of DeactivateIndicator
-            private void SpawnIndicator()
-            {
-                _indicatorPrefab.InstantiateAsync().Completed += (op) =>
-                {
-                    _indicator = op.Result.transform;
-                    UpdateIndicator();
-                };
-            } // End of SpawnIndicator
-            private void UpdateIndicator()
-            {
-                DeactivateIndicator();
-                AdjustIndicatorProportion();
-                _indicator.gameObject.SetActive(true);
-            } // End of UpdateIndicator
-            private void AdjustIndicatorProportion()
-            {
-                var indicatorTransform = _indicator.transform;
-                var targetTransform = _editObject.transform;
-                var targetPosition = targetTransform.position;
-                var targetExtents = targetTransform.GetComponent<MeshFilter>().mesh.bounds.extents;
-                
-                // Calculate - Get world scale extents
-                var extents = targetTransform.TransformVector(targetExtents);
-                extents.x = Mathf.Abs(extents.x);
-                extents.y = Mathf.Abs(extents.y);
-                extents.z = Mathf.Abs(extents.z);
-                Log("extents.x : " + extents.x + "extents.y : " + extents.y + "extents.z : " + extents.z );
-                
-                // Position
-                var newPosition = new Vector3(targetPosition.x, targetPosition.y - extents.y, targetPosition.z) ;
-                
-                // Scale
-                var multipleValue = extents.x >= extents.z ? extents.x : extents.z;
-                var newScale = new Vector3(multipleValue * 2.0f, 1.0f, multipleValue * 2.0f);
-                    
-                indicatorTransform.position = newPosition;
-                indicatorTransform.localScale = newScale;
-                indicatorTransform.parent = _editObject.transform;
-                
-            } // End of AdjustIndicatorProportion
 
             // Edit UI Button
             private void ShowEditUI()
@@ -212,9 +205,37 @@ namespace UnityCore
 
                 ShowEditUI();
             } // End of HideCloseButton
-
             
-            // Debug
+            #endregion Menu Button
+
+            #region Indicator
+
+            private void ActivateIndicator()
+            {
+                Log("Activate Indicator");
+
+                if (!_indicator)
+                {
+                    SpawnIndicator();
+                    return;
+                }
+                _indicator.UpdateIndicator(_editObject,_floatingPopUpUIPosition);
+            } // End of ActivateIndicator
+            
+            private void SpawnIndicator()
+            {
+                _indicatorPrefab.InstantiateAsync().Completed += (op) =>
+                {
+                    _indicator = op.Result.GetComponent<Indicator>();
+                    _indicator.UpdateIndicator(_editObject,_floatingPopUpUIPosition);
+                };
+            } // End of SpawnIndicator
+            
+            
+            #endregion Indicator
+            
+            #region Debug
+
             private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
             private void Log(string msg)
             {
@@ -229,7 +250,7 @@ namespace UnityCore
                 Debug.Log("[EditObject UI]: " + msg);
             }
 
-            #endregion Private Methods
+            #endregion Debug
         }
     }
 }

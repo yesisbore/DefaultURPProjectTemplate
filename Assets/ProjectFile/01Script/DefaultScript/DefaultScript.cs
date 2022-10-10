@@ -1,5 +1,5 @@
 ﻿   
- #region Variables
+    #region Variables
  
     // public DebugModeType DebugMode = DebugModeType.Global;
  
@@ -42,21 +42,24 @@
     // }
     //     Destroy(gameObject);
     // } // End of CO_Move
- 
-    // // Debug 
-    // private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-    // private void Log(string msg)
-    // {
-    //     if(CheckDebugMode) return;
-    //
-    //     Debug.Log("[]: " + msg);
-    // }
-    //
-    // private void LogWarning(string msg)
-    // {
-    //     if(CheckDebugMode) return;
-    //             
-    //     Debug.Log("[]: " + msg);
-    // }
-    
+
     #endregion Private Methods
+
+    #region Debug
+
+     // private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
+     // private void Log(string msg)
+     // {
+     //     if(CheckDebugMode) return;
+     //
+     //     Debug.Log("[]: " + msg);
+     // }
+     //
+     // private void LogWarning(string msg)
+     // {
+     //     if(CheckDebugMode) return;
+     //             
+     //     Debug.Log("[]: " + msg);
+     // }
+
+     #endregion Debug

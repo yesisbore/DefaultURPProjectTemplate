@@ -7,7 +7,6 @@ namespace UnityCore
 {
     namespace ObjectSelect
     {
-        [RequireComponent(typeof(Camera))]
         public class ObjectSelector : MonoBehaviour
         {
             #region Variables
@@ -17,26 +16,26 @@ namespace UnityCore
             // Public Variables
 
             // Private Variables
-            [Header("Prefab")] [SerializeField] private AssetReference _editObjectUIPrefab;
+            [Header("Prefab")] [SerializeField] private AssetReference _floatingPopUpUIPrefab;
 
-            [Header("Settings")] [SerializeField] private InputType _useInput = InputType.Mouse;
+            [Header("Settings")] 
             [SerializeField] private LayerMask _targetLayer;
             [SerializeField] private ObjectSelectorState _objectEditState = ObjectSelectorState.FindControlTarget;
 
             private FloaingPopUpUI _floaingPopUpUI;
             private EditObject _selectedEditObject;
-            private Camera _camera;
+            private Camera _mainCamera;
 
             // Input 
             private Vector2 InputPosition
             {
                 get
                 {
-                    switch (_useInput)
+                    switch (GameSetting.Instance.DeviceTarget)
                     {
-                        case InputType.Mouse:
+                        case DeviceTarget.PC:
                             return Input.mousePosition;
-                        case InputType.Touch:
+                        case DeviceTarget.Mobile:
                             return Input.GetTouch(0).position;
                     }
 
@@ -48,11 +47,11 @@ namespace UnityCore
             {
                 get
                 {
-                    switch (_useInput)
+                    switch (GameSetting.Instance.DeviceTarget)
                     {
-                        case InputType.Mouse:
+                        case DeviceTarget.PC:
                             return Input.GetMouseButtonDown(0);
-                        case InputType.Touch:
+                        case DeviceTarget.Mobile:
                             return Input.touchCount > 0;
                     }
 
@@ -123,7 +122,11 @@ namespace UnityCore
 
             private void GetComponents()
             {
-                _camera = GetComponent<Camera>();
+                // get a reference to our main camera
+                if (_mainCamera == null)
+                {
+                    _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+                }
             } // End of GetComponents
 
             // Edit State
@@ -160,7 +163,7 @@ namespace UnityCore
                 // If Choose another object
                 if (GetTargetFromInputPosition())
                 {
-                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
+                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
                     return;
                 }
 
@@ -178,13 +181,13 @@ namespace UnityCore
             {
                 if (!ScreenTouch) return false;
 
-                if (!_camera)
+                if (!_mainCamera)
                 {
                     LogWarning("There is no Camera");
                     return false;
                 }
 
-                var ray = _camera.ScreenPointToRay(InputPosition);
+                var ray = _mainCamera.ScreenPointToRay(InputPosition);
 
                 if (!Physics.Raycast(ray, out var hit, float.MaxValue, _targetLayer))
                 {
@@ -211,6 +214,7 @@ namespace UnityCore
                 _objectEditState = ObjectSelectorState.FindControlTarget;
             } // End of UnSelectTarget
 
+            
             // UI
             private void ShowEditUI()
             {
@@ -220,17 +224,16 @@ namespace UnityCore
                     return;
                 }
 
-                _floaingPopUpUI.ShowUI();
-                _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
+                _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
             } // End of ShowEditUI
 
             private void SpawnEditUI()
             {
-                _editObjectUIPrefab.InstantiateAsync().Completed += (op) =>
+                _floatingPopUpUIPrefab.InstantiateAsync().Completed += (op) =>
                 {
                     _floaingPopUpUI = op.Result.GetComponent<FloaingPopUpUI>();
                     _floaingPopUpUI.SetEditor(this);
-                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject);
+                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
                 };
             } // End of SpawnEditUI
 
@@ -254,13 +257,13 @@ namespace UnityCore
             private void DebugRay()
             {
                 if (!GameSetting.Instance.DebugMode) return;
-                if (!_camera) return;
+                if (!_mainCamera) return;
 
                 var playerPos = transform.position;
                 var inputPos = (Vector3) InputPosition;
                 inputPos.z = 10f;
 
-                inputPos = _camera.ScreenToWorldPoint(inputPos);
+                inputPos = _mainCamera.ScreenToWorldPoint(inputPos);
                 Debug.DrawRay(playerPos, inputPos - playerPos, Color.blue);
             }
 

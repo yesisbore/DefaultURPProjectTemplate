@@ -208,6 +208,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 802443325142345136}
     m_Modifications:
+    - target: {fileID: 308853207418068843, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 308853207418068843, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1040289236781050516, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -228,6 +236,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Move Button
       objectReference: {fileID: 0}
+    - target: {fileID: 5139640389453233779, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139640389453233779, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5581427114181643148, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -247,6 +263,14 @@ PrefabInstance:
     - target: {fileID: 6206281443518051442, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
       propertyPath: m_Name
       value: Scale Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971065467391312805, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_overflowMode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971065467391312805, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7003906791896950076, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
       propertyPath: m_Pivot.x
@@ -362,6 +386,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+--- !u!1 &3844254533346628630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7653442926510508759, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
+  m_PrefabInstance: {fileID: 6876984449950359233}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4290303210974735035
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3844254533346628630}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb65823f2a37d421ab6d6d306e475eb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &4493771048165817341 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7003906791896950076, guid: b7bc3f32b7ff442e98578ed3a8e03104, type: 3}
