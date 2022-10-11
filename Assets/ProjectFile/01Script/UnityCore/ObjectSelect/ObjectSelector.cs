@@ -158,7 +158,30 @@ namespace UnityCore
                 _objectEditState = ObjectSelectorState.WaitForMenuSelect;
             } // End of GetControlTarget
 
-            private bool IsInputOnUI => EventSystem.current.IsPointerOverGameObject();
+            private bool IsInputOnUI
+            {
+                get
+                {
+                    if (GameSetting.Instance.DeviceTarget == DeviceTarget.PC)
+                    {
+                        return EventSystem.current.IsPointerOverGameObject();
+                    }
+                    else if (GameSetting.Instance.DeviceTarget == DeviceTarget.Mobile)
+                    {
+                        foreach (Touch touch in Input.touches)
+                        {
+                            int id = touch.fingerId;
+                            if (EventSystem.current.IsPointerOverGameObject(id))
+                            {
+                                Debug.Log("Input is On UI");
+                                return true;
+                            }
+                        }
+                    }
+
+                    return false;
+                }
+            }
 
             private void WaitForMenuSelect()
             {
