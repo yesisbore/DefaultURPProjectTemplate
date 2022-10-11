@@ -81,7 +81,7 @@ namespace UnityCore
                 
                 private const float _threshold = 0.01f;
 
-                private bool IsCurrentDeviceMouse => _playerInput.currentControlScheme == "KeyboardMouse";
+                private bool IsCurrentDeviceMouse => _playerInput.currentControlScheme == "Keyboard&Mouse";
 
                 #endregion Variables
 

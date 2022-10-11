@@ -1,7 +1,7 @@
 namespace GlobalType
 {
     public enum DebugModeType{ Global,Local}
-    public enum DeviceTarget { PC, Mobile }
+    public enum DeviceType { PC, Touch, GamePad, Joystick, XR }
     public enum TargetResolution
     {
         HD,FHD,FourK,EightK

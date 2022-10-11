@@ -1,13 +1,18 @@
 using System.Collections;
 using GlobalType;
+using UnityCore.PlayerControl;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
+using DeviceType = GlobalType.DeviceType;
 
 namespace UnityCore
 {
     namespace ObjectSelect
     {
+        [RequireComponent(typeof(PlayerInput))]
+        [RequireComponent(typeof(ControllerInputs))]
         public class ObjectSelector : MonoBehaviour
         {
             #region Variables
@@ -28,38 +33,23 @@ namespace UnityCore
             private Camera _mainCamera;
             private bool _canTouch = true;
 
-            // Input 
-            private Vector2 InputPosition
+            private bool _initialized = false;
+            
+            // Input
+            private ControllerInputs _controllerInputs;
+
+            private Vector2 InputPosition => _controllerInputs.inputPosition;
+            private bool ScreenPressed
             {
                 get
                 {
-                    switch (GameSetting.Instance.DeviceTarget)
-                    {
-                        case DeviceTarget.PC:
-                            return Input.mousePosition;
-                        case DeviceTarget.Mobile:
-                            return Input.GetTouch(0).position;
-                    }
+                    if (!_controllerInputs.screenPressed) return false;
+                    
+                    _controllerInputs.screenPressed = false;
+                    return true;
 
-                    return Vector2.zero;
                 }
-            } // End of InputPosition
-
-            private bool ScreenTouch
-            {
-                get
-                {
-                    switch (GameSetting.Instance.DeviceTarget)
-                    {
-                        case DeviceTarget.PC:
-                            return Input.GetMouseButtonDown(0);
-                        case DeviceTarget.Mobile:
-                            return Input.touchCount > 0;
-                    }
-
-                    return false;
-                }
-            } // End of ScreenTouch
+            }
 
             #endregion Variables
 
@@ -72,6 +62,8 @@ namespace UnityCore
 
             private void Update()
             {
+                if(!_initialized) return;
+                    
                 DebugRay();
                 ObjectControl();
             } // End of Unity - Update
@@ -120,15 +112,15 @@ namespace UnityCore
             private void Initialize()
             {
                 GetComponents();
+                
+                _initialized = true;
             } // End of Initialize
 
             private void GetComponents()
             {
-                // get a reference to our main camera
-                if (_mainCamera == null)
-                {
-                    _mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
-                }
+                _mainCamera = Camera.main;
+                _controllerInputs = GetComponent<ControllerInputs>();
+                
             } // End of GetComponents
 
             // Edit State
@@ -162,11 +154,11 @@ namespace UnityCore
             {
                 get
                 {
-                    if (GameSetting.Instance.DeviceTarget == DeviceTarget.PC)
+                    if (_controllerInputs.CurrentDevice == DeviceType.PC)
                     {
                         return EventSystem.current.IsPointerOverGameObject();
                     }
-                    else if (GameSetting.Instance.DeviceTarget == DeviceTarget.Mobile)
+                    else if (_controllerInputs.CurrentDevice == DeviceType.Touch)
                     {
                         foreach (Touch touch in Input.touches)
                         {
@@ -185,7 +177,7 @@ namespace UnityCore
 
             private void WaitForMenuSelect()
             {
-                if (!ScreenTouch) return;
+                if (!ScreenPressed) return;
 
                 // If Choose another object
                 if (GetTargetFromInputPosition())
@@ -206,7 +198,7 @@ namespace UnityCore
             // Ray
             private bool GetTargetFromInputPosition()
             {
-                if (!ScreenTouch) return false;
+                if (!ScreenPressed) return false;
 
                 StartCoroutine(Co_TouchDelay());
                 if (!_mainCamera)
