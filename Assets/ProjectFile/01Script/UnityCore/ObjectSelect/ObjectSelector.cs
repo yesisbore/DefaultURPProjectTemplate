@@ -1,3 +1,4 @@
+using System.Collections;
 using GlobalType;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -22,9 +23,10 @@ namespace UnityCore
             [SerializeField] private LayerMask _targetLayer;
             [SerializeField] private ObjectSelectorState _objectEditState = ObjectSelectorState.FindControlTarget;
 
-            private FloaingPopUpUI _floaingPopUpUI;
+            private FloatingPopUpUI _floatingPopUpUI;
             private EditObject _selectedEditObject;
             private Camera _mainCamera;
+            private bool _canTouch = true;
 
             // Input 
             private Vector2 InputPosition
@@ -132,6 +134,8 @@ namespace UnityCore
             // Edit State
             private void ObjectControl()
             {
+                if(!_canTouch) return;
+                
                 switch (_objectEditState)
                 {
                     case ObjectSelectorState.FindControlTarget:
@@ -144,7 +148,7 @@ namespace UnityCore
             } // End of ObjectControl
 
             private void FindControlTarget()
-            {
+            {         
                 if (_selectedEditObject) return;
 
                 if (!GetTargetFromInputPosition()) return;
@@ -163,7 +167,7 @@ namespace UnityCore
                 // If Choose another object
                 if (GetTargetFromInputPosition())
                 {
-                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
+                    _floatingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
                     return;
                 }
 
@@ -181,26 +185,27 @@ namespace UnityCore
             {
                 if (!ScreenTouch) return false;
 
+                StartCoroutine(Co_TouchDelay());
                 if (!_mainCamera)
                 {
                     LogWarning("There is no Camera");
                     return false;
                 }
-
                 var ray = _mainCamera.ScreenPointToRay(InputPosition);
 
                 if (!Physics.Raycast(ray, out var hit, float.MaxValue, _targetLayer))
                 {
                     return false;
                 }
-
+                Log("2");
                 Log("Hit object : " + hit.transform.name);
 
                 if (_selectedEditObject)
                 {
+                    Log("3");
                     Destroy(_selectedEditObject);
                 }
-
+                Log("4");
                 _selectedEditObject = hit.transform.gameObject.AddComponent<EditObject>();
                 return true;
             } // End of GetTargetFromInputPosition
@@ -210,30 +215,36 @@ namespace UnityCore
                 Log("UnSelect Target");
                 Destroy(_selectedEditObject);
                 _selectedEditObject = null;
-                _floaingPopUpUI.HideUI();
+                _floatingPopUpUI.HideUI();
                 _objectEditState = ObjectSelectorState.FindControlTarget;
             } // End of UnSelectTarget
 
+            private IEnumerator Co_TouchDelay()
+            {
+                _canTouch = false;
+                yield return new WaitForSeconds(0.05f);
+                _canTouch = true;
+            }
             
             // UI
             private void ShowEditUI()
             {
-                if (!_floaingPopUpUI)
+                if (!_floatingPopUpUI)
                 {
                     SpawnEditUI();
                     return;
                 }
 
-                _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
+                _floatingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
             } // End of ShowEditUI
 
             private void SpawnEditUI()
             {
                 _floatingPopUpUIPrefab.InstantiateAsync().Completed += (op) =>
                 {
-                    _floaingPopUpUI = op.Result.GetComponent<FloaingPopUpUI>();
-                    _floaingPopUpUI.SetEditor(this);
-                    _floaingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
+                    _floatingPopUpUI = op.Result.GetComponent<FloatingPopUpUI>();
+                    _floatingPopUpUI.SetEditor(this);
+                    _floatingPopUpUI.UpdateEditObject(_selectedEditObject.transform);
                 };
             } // End of SpawnEditUI
 

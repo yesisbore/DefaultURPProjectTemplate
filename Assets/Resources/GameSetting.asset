@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: GameSetting
   m_EditorClassIdentifier: 
   DebugMode: 0
-  name: 
+  TargetResolution: 1
+  DeviceTarget: 1
   VolumeMaster: 0.643
   VolumeBGM: 0.626
   VolumeEffect: 0.558

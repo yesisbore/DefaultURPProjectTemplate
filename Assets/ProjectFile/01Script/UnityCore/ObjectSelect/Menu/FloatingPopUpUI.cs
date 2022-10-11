@@ -11,7 +11,7 @@ namespace UnityCore
     namespace ObjectSelect
     {
         [RequireComponent(typeof(RectTransform))]
-        public class FloaingPopUpUI : MonoBehaviour
+        public class FloatingPopUpUI : MonoBehaviour
         {
             #region Variables
 
@@ -135,13 +135,11 @@ namespace UnityCore
 
             private void InitializeUI()
             {
+                gameObject.SetActive(false);
                 _rootRect.pivot = Vector2.zero;
                 _rootRect.anchoredPosition = Vector2.zero;
-                if (_movableScreen == null)
-                {
-                    _movableScreen = new MovableScreen(_rootRect.rect.size);
-                }
-                // 변경되면 삭제 후 초기화 필요 업데이트 계속 돌아가서 - 그냥 오브젝트 변경만 해도될듯 
+                _movableScreen ??= new MovableScreen(_rootRect.rect.size);
+                
                 if (_floatingPopUpUIPosition == null)
                 {
                     _floatingPopUpUIPosition = new FloatingPopUpUIPosition(_editObject);
