@@ -3,86 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/ForwardRenderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/ForwardRenderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/ControllerInputs.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/ControllerInputs.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/DefaultInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/DefaultInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/DefaultInputs.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/InputSystem/DefaultInputs.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/FloaingPopUpUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/FloaingPopUpUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelectType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelectType.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/FloaingPopUp UI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/FloaingPopUp UI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/Indicator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/02Prefab/UnityCore/EditObject/UI/Indicator.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Blue.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Blue.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Green.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Green.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Basic/M_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/M_Indicator.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/M_Indicator.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Blue3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Brown.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Brown.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Cyan.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Cyan.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Green3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Grey4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Magenta.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Magenta.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Olive.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Olive.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Orange.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Orange.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Pink.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Pink.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Purple.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Purple.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Yellow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Material/Prototype/Prototype_512x512_Yellow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/06Texture.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/07Shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/08VFXGraph.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/09ScriptableObject.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectTestScene.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectTestScene/Effect Test - 2D.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectTestScene/Effect Test - 2D.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectTestScene/Effect Test - 3D.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EffectTestScene/Effect Test - 3D.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Editing.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Editing.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PackageManagerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Select.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Object Select.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +33,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/SimpleFirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3ba82d6742941a19c45cede06b6aa4e157a00/ba/c7552591/Vector2.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -134,6 +65,7 @@
       <workItem from="1665282894079" duration="18160000" />
       <workItem from="1665347144321" duration="941000" />
       <workItem from="1665408103389" duration="4404000" />
+      <workItem from="1665492086974" duration="4212000" />
     </task>
     <servers />
   </component>

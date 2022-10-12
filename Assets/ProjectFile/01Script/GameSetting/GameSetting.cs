@@ -1,5 +1,6 @@
 using GlobalType;
 using UnityEngine;
+using DeviceType = GlobalType.DeviceType;
 
 public class GameSetting : SingletonScriptableObject<GameSetting>
 {
@@ -10,7 +11,7 @@ public class GameSetting : SingletonScriptableObject<GameSetting>
 
     public TargetResolution TargetResolution = GlobalType.TargetResolution.FHD;
 
-    public DeviceTarget DeviceTarget = DeviceTarget.PC; 
+    public DeviceType DeviceType = DeviceType.PC; 
     
     [Header("Volume Setting")] 
     [Range(0.0f,1.0f)]
