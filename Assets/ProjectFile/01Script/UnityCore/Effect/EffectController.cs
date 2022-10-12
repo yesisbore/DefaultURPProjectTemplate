@@ -12,7 +12,7 @@ namespace UnityCore
             // Public Variables
             public static EffectController Instance;
 
-            public DebugModeType DebugMode = DebugModeType.Global;
+            public bool DebugMode = false;
             // Private Variables
 
             #endregion Variables
@@ -42,20 +42,18 @@ namespace UnityCore
                 Instance = this;
             } // End of Configure
 
-            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-
             private void Log(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Debug.Log("[]: " + msg);
+                if(!DebugMode) return;
+            
+                Logger.Log<EffectController>( msg);
             }
-
+            
             private void LogWarning(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Debug.Log("[]: " + msg);
+                if(!DebugMode) return;
+                        
+                Logger.LogWarning<EffectController>(msg);
             }
 
             #endregion Private Methods

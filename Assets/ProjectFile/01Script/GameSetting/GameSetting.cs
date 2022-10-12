@@ -4,8 +4,6 @@ using DeviceType = GlobalType.DeviceType;
 
 public class GameSetting : SingletonScriptableObject<GameSetting>
 {
-    public bool DebugMode = false;
-    
     [Header("Play Setting")]
     //public string name = "";
 

@@ -10,8 +10,8 @@ namespace UnityCore
         {
            
             #region Variables
-         
-            public DebugModeType DebugMode = DebugModeType.Global;
+
+            public bool DebugMode = false;
          
             // Public Variables
             
@@ -68,19 +68,18 @@ namespace UnityCore
         
             #region Debug
         
-            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
             private void Log(string msg)
             {
-                if(CheckDebugMode) return;
-            
-                Debug.Log("[Indicator]: " + msg);
+                if(!DebugMode) return;
+     
+                Logger.Log<Indicator>( msg);
             }
-            
+     
             private void LogWarning(string msg)
             {
-                if(CheckDebugMode) return;
-                        
-                Debug.Log("[Indicator]: " + msg);
+                if(!DebugMode) return;
+                 
+                Logger.LogWarning<Indicator>(msg);
             }
         
             #endregion Debug

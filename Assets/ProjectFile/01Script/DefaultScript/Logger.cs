@@ -23,6 +23,9 @@ public sealed class Logger
     public static void LogFormat(Object context, string message, params object[] args) => Debug.LogFormat(context, message, args);
 
     [System.Diagnostics.Conditional(ENABLE_LOGS)] 
+    public static void LogWarning<T>(object message) => Debug.LogWarning("[" + typeof(T) + "] : "+message);
+    
+    [System.Diagnostics.Conditional(ENABLE_LOGS)] 
     public static void LogWarning(object message) => Debug.LogWarning(message);
     
     [System.Diagnostics.Conditional(ENABLE_LOGS)]

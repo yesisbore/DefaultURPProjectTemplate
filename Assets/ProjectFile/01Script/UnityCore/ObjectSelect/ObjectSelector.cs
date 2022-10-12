@@ -17,7 +17,7 @@ namespace UnityCore
         {
             #region Variables
 
-            public DebugModeType DebugMode = DebugModeType.Global;
+            public bool DebugMode = false;
 
             // Public Variables
 
@@ -264,24 +264,23 @@ namespace UnityCore
             } // End of SpawnEditUI
 
             // Debug 
-            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-
             private void Log(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Logger.Log<ObjectSelector>(msg);
+                if(!DebugMode) return;
+            
+                Logger.Log<ObjectSelector>( msg);
             }
+            
             private void LogWarning(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Debug.Log("[Object Controller]: " + msg);
+                if(!DebugMode) return;
+                        
+                Logger.LogWarning<ObjectSelector>(msg);
             }
 
             private void DebugRay()
             {
-                if (!GameSetting.Instance.DebugMode) return;
+                if (!DebugMode) return;
                 if (!_mainCamera) return;
 
                 var playerPos = transform.position;

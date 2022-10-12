@@ -8,8 +8,8 @@ public class AudioSetting : MonoBehaviour
     #region Variables
 
     //Public Variables
-    
-    public DebugModeType DebugMode = DebugModeType.Global;
+
+    public bool DebugMode = false;
     
     // Private Variables
     
@@ -31,19 +31,18 @@ public class AudioSetting : MonoBehaviour
     
     #region Private Methods
     
-    private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     private void Log(string msg)
     {
-        if(CheckDebugMode) return;
-                
-        Debug.Log("[Setting Menu]: " + msg);
+        if(!DebugMode) return;
+     
+        Logger.Log<AudioSetting>( msg);
     }
-    
+     
     private void LogWarning(string msg)
     {
-        if(CheckDebugMode) return;
-                
-        Debug.Log("[Setting Menu]: " + msg);
+        if(!DebugMode) return;
+                 
+        Logger.LogWarning<AudioSetting>(msg);
     }
     
     #endregion Private Methods

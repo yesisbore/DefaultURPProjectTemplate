@@ -1,7 +1,7 @@
 ﻿   
     #region Variables
  
-    // public DebugModeType DebugMode = DebugModeType.Global;
+    //public bool DebugMode = false;
  
     // Public Variables
     
@@ -47,19 +47,18 @@
 
     #region Debug
 
-     // private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
      // private void Log(string msg)
      // {
-     //     if(CheckDebugMode) return;
+     //     if(!DebugMode) return;
      //
-     //     Debug.Log("[]: " + msg);
+     //     Logger.Log<>( msg);
      // }
      //
      // private void LogWarning(string msg)
      // {
-     //     if(CheckDebugMode) return;
+     //     if(!DebugMode) return;
      //             
-     //     Debug.Log("[]: " + msg);
+     //     Logger.LogWarning<>(msg);
      // }
 
      #endregion Debug

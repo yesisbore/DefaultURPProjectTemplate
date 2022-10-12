@@ -7,8 +7,8 @@ namespace TestScript
     {
        
         #region Variables
-     
-        public DebugModeType DebugMode = DebugModeType.Global;
+
+        public bool DebugMode = false;
      
         // Public Variables
         
@@ -35,19 +35,18 @@ namespace TestScript
         //private void GetComponents(){} // End of GetComponents
     
     
-        private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
         private void Log(string msg)
         {
-            if(CheckDebugMode) return;
-        
-            Debug.Log("[]: " + msg);
+            if(!DebugMode) return;
+            
+            Logger.Log<TestEffect2D>( msg);
         }
-        
+            
         private void LogWarning(string msg)
         {
-            if(CheckDebugMode) return;
-                    
-            Debug.Log("[]: " + msg);
+            if(!DebugMode) return;
+                        
+            Logger.LogWarning<TestEffect2D>(msg);
         }
         
         #endregion Private Methods

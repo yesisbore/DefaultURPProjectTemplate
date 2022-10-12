@@ -13,7 +13,7 @@ namespace UnityCore
         {
             #region Variables
 
-            public DebugModeType DebugMode = DebugModeType.Global;
+            public bool DebugMode = false;
 
             // Public Variables
 
@@ -169,20 +169,18 @@ namespace UnityCore
             private void SaveBeforeTouchDistance() => _beforeTouchDistance = CurTouchDistance;
             
             // Debug
-            private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-
             private void Log(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Debug.Log("[Edit Object]: " + msg);
+                if(!DebugMode) return;
+            
+                Logger.Log<EditObject>( msg);
             }
-
+            
             private void LogWarning(string msg)
             {
-                if (CheckDebugMode) return;
-
-                Debug.Log("[Edit Object]: " + msg);
+                if(!DebugMode) return;
+                        
+                Logger.LogWarning<EditObject>(msg);
             }
 
             #endregion Private Methods

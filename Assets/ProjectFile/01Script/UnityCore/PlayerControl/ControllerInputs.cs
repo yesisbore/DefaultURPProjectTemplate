@@ -1,4 +1,3 @@
-using GlobalType;
 using UnityEngine;
 using DeviceType = GlobalType.DeviceType;
 #if ENABLE_INPUT_SYSTEM 

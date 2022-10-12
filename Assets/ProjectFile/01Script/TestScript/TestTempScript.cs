@@ -9,7 +9,7 @@ namespace TestScript
 
         // Public Variables
 
-        public DebugModeType DebugMode = DebugModeType.Global;
+        public bool DebugMode = false;
 
         public Canvas Canvas;
         public GameObject UITop;
@@ -146,20 +146,18 @@ namespace TestScript
             // Log("Screen Pos : " + TargetTopScreenPos);
         } // ENd of UpdateUIPosition
 
-        private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
-
         private void Log(string msg)
         {
-            if (CheckDebugMode) return;
-
-            Debug.Log("[Test Temp Script]: " + msg);
+            if(!DebugMode) return;
+     
+            Logger.Log<TestTempScript>( msg);
         }
-
+     
         private void LogWarning(string msg)
         {
-            if (CheckDebugMode) return;
-
-            Debug.Log("[Test Temp Script]: " + msg);
+            if(!DebugMode) return;
+                 
+            Logger.LogWarning<TestTempScript>(msg);
         }
 
         #endregion Private Methods

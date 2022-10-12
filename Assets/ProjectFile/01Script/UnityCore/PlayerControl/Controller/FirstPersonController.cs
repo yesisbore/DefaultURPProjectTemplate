@@ -14,8 +14,8 @@ namespace UnityCore
             public class FirstPersonController : MonoBehaviour
             {
                 #region Variables
- 
-                public DebugModeType DebugMode = DebugModeType.Global;
+
+                public bool DebugMode = false;
  
                 // Public Variables
     
@@ -279,19 +279,18 @@ namespace UnityCore
 	                Gizmos.DrawSphere(new Vector3(transform.position.x, transform.position.y - _groundedOffset, transform.position.z), _groundedRadius);
                 }
                 
-                private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
                 private void Log(string msg)
                 {
-                    if(CheckDebugMode) return;
-                
-                    Debug.Log("[Controller - FirstPerson]: " + msg);
+	                if(!DebugMode) return;
+            
+	                Logger.Log<FirstPersonController>( msg);
                 }
-                
+            
                 private void LogWarning(string msg)
                 {
-                    if(CheckDebugMode) return;
-                            
-                    Debug.Log("[Controller - FirstPerson]: " + msg);
+	                if(!DebugMode) return;
+                        
+	                Logger.LogWarning<FirstPersonController>(msg);
                 }
 
                 #endregion Debug

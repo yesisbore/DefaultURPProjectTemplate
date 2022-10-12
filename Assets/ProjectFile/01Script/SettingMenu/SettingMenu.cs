@@ -8,7 +8,7 @@ public class SettingMenu : MonoBehaviour
 
     //Public Variables
 
-    public DebugModeType DebugMode = DebugModeType.Global;
+    public bool DebugMode = false;
     
     // Private Variables
 
@@ -63,19 +63,18 @@ public class SettingMenu : MonoBehaviour
     } // End of AddEvent
     
 
-    private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
     private void Log(string msg)
     {
-        if(CheckDebugMode) return;
-                
-        Debug.Log("[Setting Menu]: " + msg);
+        if(!DebugMode) return;
+     
+        Logger.Log<SettingMenu>( msg);
     }
-    
+     
     private void LogWarning(string msg)
     {
-        if(CheckDebugMode) return;
-                
-        Debug.Log("[Setting Menu]: " + msg);
+        if(!DebugMode) return;
+                 
+        Logger.LogWarning<SettingMenu>(msg);
     }
     
     #endregion Private Methods

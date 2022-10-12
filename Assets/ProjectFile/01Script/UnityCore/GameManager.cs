@@ -7,8 +7,8 @@ namespace UnityCore
     public class GameManager : Singleton<GameManager>
     {
         #region Variables
- 
-        public DebugModeType DebugMode = DebugModeType.Global;
+
+        public bool DebugMode = false;
  
         // Public Variables
     
@@ -96,19 +96,18 @@ namespace UnityCore
 
 
         
-        private bool CheckDebugMode => DebugMode == DebugModeType.Global && !GameSetting.Instance.DebugMode;
         private void Log(string msg)
         {
-            if(CheckDebugMode) return;
-        
-            Debug.Log("[Game Manager]: " + msg);
+            if(!DebugMode) return;
+            
+            Logger.Log<GameManager>( msg);
         }
-        
+            
         private void LogWarning(string msg)
         {
-            if(CheckDebugMode) return;
-                    
-            Debug.Log("[Game Manager]: " + msg);
+            if(!DebugMode) return;
+                        
+            Logger.LogWarning<GameManager>(msg);
         }
     
         #endregion Private Methods
