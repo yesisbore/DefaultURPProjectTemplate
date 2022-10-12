@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/Logger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GameSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalType.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/SettingMenu/AudioSetting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/SettingMenu/AudioSetting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/SettingMenu/SettingMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/SettingMenu/SettingMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestEffect2D.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestEffect2D.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestTempScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestTempScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Audio/AudioController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Audio/AudioController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Effect/EffectController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Effect/EffectController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/EditObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/EditObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/FloatingPopUpUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/Menu/FloatingPopUpUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/ObjectSelect/ObjectSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/SimpleFirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/SimpleFirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/JoyStick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/JoyStick.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Scene/SceneController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Scene/SceneController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/UI/Indicator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/UI/Indicator.cs" afterDir="false" />
-    </list>
+    <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,7 +54,7 @@
       <workItem from="1665347144321" duration="941000" />
       <workItem from="1665408103389" duration="4404000" />
       <workItem from="1665492086974" duration="4212000" />
-      <workItem from="1665581094248" duration="967000" />
+      <workItem from="1665581094248" duration="1205000" />
     </task>
     <servers />
   </component>
