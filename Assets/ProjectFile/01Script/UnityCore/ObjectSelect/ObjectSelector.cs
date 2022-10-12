@@ -278,9 +278,8 @@ namespace UnityCore
             {
                 if (CheckDebugMode) return;
 
-                Debug.Log("[Object Controller]: " + msg);
+                Logger.Log<ObjectSelector>(msg);
             }
-
             private void LogWarning(string msg)
             {
                 if (CheckDebugMode) return;
