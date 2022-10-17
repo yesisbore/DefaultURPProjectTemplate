@@ -50,7 +50,7 @@ MonoBehaviour:
   _liquid: {fileID: 2726854019708424344}
   _maxWobble: 0.01
   _wobbleSpeed: 0.3
-  _recovery: 1
+  _recovery: 0.3
 --- !u!1 &2726854019708424344
 GameObject:
   m_ObjectHideFlags: 0
