@@ -3,8 +3,277 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/3Material/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Ripple/4Mesh.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/0Prefab/SimpleLiquidBottle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/0Prefab/SimpleLiquidBottle.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/DefaultMat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/DefaultMat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/DefaultShader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/DefaultShader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Bacteria.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Bacteria.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/BacteriaSmoothstep.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/BacteriaSmoothstep.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Brick.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Brick.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Dots.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Dots.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Grid.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Grid.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Herringbone.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Herringbone.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Hex Lattice.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Hex Lattice.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Houndstooth.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Houndstooth.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Smooth Wave.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Smooth Wave.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Spiral.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Spiral.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Stripes.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Stripes.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Truchet.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Truchet.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Whirl.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Whirl.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Zig Zag.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Shader Graph Sample/12.1.7/Procedural Patterns/Zig Zag.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Bonfire.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Bonfire.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Lightning.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Lightning.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Smoke.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Smoke.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Sparks.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Prefabs/Sparks.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/MeshOutput.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/MeshOutput/FlowMapExample-Magma.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/MeshOutput/FlowMapExample-Magma.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/Flipbook.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/Flipbook.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/FlipbookBlend.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/FlipbookBlend.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/MotionVectorsFlipbook.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/MotionVectorsFlipbook.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/SimpleParticle.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/ParticleOutput/SimpleParticle.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Flipbook UV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Flipbook UV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-ComputeUV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-ComputeUV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-SampleNormalsTexture.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-SampleNormalsTexture.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-SampleTexture.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/FlowMap-SampleTexture.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Pixel Depth.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Pixel Depth.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook Blend MV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook Blend MV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook Blend.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook Blend.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/Sample Flipbook.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/SoftParticle.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Shaders/Subgraphs/SoftParticle.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Interpolate Fade Attribute.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Interpolate Fade Attribute.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Orient - Smart Fixed Axis.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Orient - Smart Fixed Axis.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Orient - VR Camera Facing.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Orient - VR Camera Facing.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Set Color and Alpha.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Set Color and Alpha.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Set stripProgress Attribute.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Set stripProgress Attribute.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Vortex.vfxblock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Blocks/Vortex.vfxblock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Bound (Oriented Box).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Bound (Oriented Box).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Bound (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Bound (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Clamp (AABox).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Clamp (AABox).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Clamp (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Clamp (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Degrees to Radians.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Degrees to Radians.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (AABox).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (AABox).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Oriented Box).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Oriented Box).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Position).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Position).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Encompass (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Feather Step.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Feather Step.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Color and Alpha (Current).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Color and Alpha (Current).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Color and Alpha (Source).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Color and Alpha (Source).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Fade Attribute.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Fade Attribute.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Strip Progress.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get Strip Progress.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get stripProgress Attribute.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Get stripProgress Attribute.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Is Inside (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Is Inside (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Is Inside.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Is Inside.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (AABox).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (AABox).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Circle).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Circle).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Oriented Box).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Oriented Box).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Measure (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Periodic Vector Animation.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Periodic Vector Animation.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Radians to Degrees.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Radians to Degrees.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Position (Circle).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Position (Circle).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Position (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Position (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Vector.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Random Vector.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Sample 1D Linear.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Sample 1D Linear.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Sample Multiple Position Map.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Sample Multiple Position Map.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Spring (1D).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Spring (1D).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Spring (Sphere).vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Spring (Sphere).vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Bounce.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Bounce.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Circ.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Circ.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Elastic.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Elastic.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Expo.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Expo.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Quart.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Quart.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Sine.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease In Sine.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Bounce.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Bounce.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Circ.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Circ.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Elastic.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Elastic.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Expo.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Expo.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Quart.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Quart.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Sine.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease InOut Sine.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Bounce.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Bounce.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Circ.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Circ.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Elastic.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Elastic.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Expo.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Expo.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Quart.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Quart.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Sine.vfxoperator" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Subgraphs/Operators/Tween/Tween Ease Out Sine.vfxoperator.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion01_5x5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion01_5x5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion02_5x5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion02_5x5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion0_01_5x5_motion.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Explosion/Explosion0_01_5x5_motion.tga.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame02-temperature_16x5_ldr.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame02-temperature_16x5_ldr.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame02_16x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame02_16x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame03-hollow-temperature_16x5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame03-hollow-temperature_16x5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame03_16x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/Flame03_16x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01-mini_15x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01-mini_15x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01-smaller-temperature_15x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01-smaller-temperature_15x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01_15x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Fire/SmallFlame01_15x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/FlowMaps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/FlowMaps/FlowMap01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/FlowMaps/FlowMap01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/CellularNoise01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/CellularNoise01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/CellularNormals01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/CellularNormals01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/FlipbookTest_4x4.psd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/FlipbookTest_4x4.psd.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/PerlinNoise01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/PerlinNoise01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/PerlinNoise02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/PerlinNoise02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/RidgedPerlin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Generic/RidgedPerlin.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/CandleSmoke01_20x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/CandleSmoke01_20x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/Cloud04_8x8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/Cloud04_8x8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/DiscSmoke01_16x4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/DiscSmoke01_16x4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke02_8x8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke02_8x8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03_8x8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03_8x8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8_N.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8_N.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8_distortion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/Textures/Smoke/WispySmoke03b_8x8_distortion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Bonfire.vfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Bonfire.vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Flames.vfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Flames.vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Lightning.vfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Lightning.vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Smoke.vfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Smoke.vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Sparks.vfx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/Sample/Visual Effect Graph Sample/12.1.7/VisualEffectGraph Additions/VFX/Sparks.vfx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,16 +305,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="$PROJECT_DIR$/../../Version/Mac/2021.3.8f1/Unity.app/Contents/MacOS/Unity" />
@@ -94,6 +363,7 @@
       <workItem from="1665581094248" duration="1205000" />
       <workItem from="1665672339213" duration="3283000" />
       <workItem from="1666011839204" duration="8706000" />
+      <workItem from="1666058432434" duration="12356000" />
     </task>
     <servers />
   </component>

@@ -4,23 +4,39 @@ Shader "Custum/DefaultShader"
     {
         _MainTex("MainTexture",2D) = "white"{}
         _MainColor("MainColor",color) = (1,1,1,1)
+        
+        [Space(20)]
+        //[NoScaleOffset]
+         _FlowMap("Flow Map",2D) = "white"{}
+        _FlowTime("Flow Time",Range(0,10)) = 1
+        _FlowIntensity("Flow Intensity",Range(0,2)) = 1
+        _LightWidth("Light Width",Range(0,255)) = 1
+        _LightStep("Light Step",Range(0,255)) = 1
+        
         //_Intensity("Intensity",Range(0,1)) = 0.5
         //float _Intensity;
         
         // Blend Operation 을 토글로 바꿔줌 
-        [Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Blend",Float) = 1
-        [Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Blend",Float) = 0
+        //[Enum(UnityEngine.Rendering.BlendMode)] _SrcBlend("Src Blend",Float) = 1
+        //[Enum(UnityEngine.Rendering.BlendMode)] _DstBlend("Dst Blend",Float) = 0
         
         // Culling 
-        [Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull Mode",Float) = 1
+        //[Enum(UnityEngine.Rendering.CullMode)] _Cull("Cull Mode",Float) = 1
 
         // z
-        [Enum(Off,0, On,1)] _ZWrite ("ZWrite",Float) = 0
-        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest",Float) = 0
+        //[Enum(Off,0, On,1)] _ZWrite ("ZWrite",Float) = 0
+        //[Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest",Float) = 0
 
         // 에트리뷰트
-        [Space(20)]
-        [Toggle] _AlphaOn("AlphaTest",float) = 1
+        //[NoScaleOffset]
+        //[Space(20)]
+        //[Toggle] _AlphaOn("AlphaTest",float) = 1
+        
+        // Built In Value - float 4 
+        // _Time - x/20, y/1, z*2, w*3
+        // _SinTime - x/8, y/4, z/2, w
+        // _CosTime - x/8, y/4, z/2, w
+        // unity_DeltaTime - x, 1/y, smoothDt, 1/smoothDT
     } 
 
     SubShader
@@ -31,7 +47,7 @@ Shader "Custum/DefaultShader"
             "RenderPipeline"="UniversalPipeline"
             
             "RenderType"="Opaque"
-            // Opaque, Transparent, TransparentCutout, Background, Overlay 
+            // Opaque, Transparency, TransparentCutout, Background, Overlay 
             // (터레인 랜더타입)TreeOpaque. TreeTransparentCutout, TreeBillboard, Grass, GrassBillboard
             
             "Queue"="Geometry"
@@ -99,7 +115,8 @@ Shader "Custum/DefaultShader"
             struct VertexInput
             {
                 float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
+                float2 uv     : TEXCOORD0;
+                float3 normal : NORMAL;
                 // 앞의 이름은 상관없고 뒤의 Semantic은 문법이라 지켜줘여함 
                 // float3 normal : NORMAL 
                 // float4 tangent : TANGENT
@@ -110,7 +127,8 @@ Shader "Custum/DefaultShader"
             struct VertexOutput
             {
                 float4 vertex : SV_POSITION; // 투영공간으로 변환된 후의 버텍스 포지션
-                float2 uv : TEXCOORD0;
+                float2 uv     : TEXCOORD0;
+                float3 normal : NORMAL;
                 // float3 normal : NORMAL 뷰 공간으로 변형된 후 버텍스의 노멀값
                 // float4 tangent : TANGENT
                 // diff,spec : COLOR
@@ -119,8 +137,12 @@ Shader "Custum/DefaultShader"
 
             // 변수 사용 
             half4 _MainColor;
-            sampler2D _MainTex;
+            
+            Texture2D _MainTex;
             float4 _MainTex_ST; // 타일링 scale 과 offset을 한번에 가져옴
+            SamplerState sampler_MainTex; 
+            sampler2D _FlowMap;
+            float _FlowTime,_FlowIntensity,_LightWidth,_LightStep;
             
             // Separate textures and Samples
             // (분리해서 사용하면 더 많은 텍스쳐를 사용가능) OpenGL ES2.0 이상에서 사용
@@ -128,22 +150,40 @@ Shader "Custum/DefaultShader"
             //Texture2D _MainTex2;
             //SamplerState sampler_MainTex; Sampler + MainTex
             //half4 color = _MainTex1.Sampler(sampler_MainTex.uv);
-            //color += _MainTex2.Sampler(sampler_MainTex.uv);
+            //color += _MainTex2.Sampler(sampler_MainTex.uv); 
 
             
             // 버텍스 셰이더
             VertexOutput vert(VertexInput v)
             {
-                VertexOutput o; 
-                o.vertex = TransformObjectToHClip(v.vertex.xyz); // MVP 한번에 처리 
+                VertexOutput o;
+                o.vertex = TransformObjectToHClip(v.vertex.xyz); // MVP 한번에 처리
+                o.normal = TransformObjectToWorldNormal(v.normal);
                 o.uv = v.uv * _MainTex_ST.xy + _MainTex_ST.zw;
+
+                //o.vertex.y += v.vertex.x;
+                half3 positionWS = TransformObjectToWorld(v.vertex.xyz);
+
+                half4 noise = tex2Dlod(_FlowMap, float4(o.uv,0,0));
+                
+                o.vertex.y += sin(positionWS.x + v.vertex.z + _Time.y) * noise.r * _FlowIntensity;
                 return o;
             }
 
             // 픽셀 셰이더
             half4 frag(VertexOutput i) : SV_Target
             {
-                float4 color = tex2D(_MainTex,i.uv) * _MainColor;
+                //float4 flow = _FlowMap.Sample(sampler_MainTex,i.uv);
+                //i.uv += frac(_Time.x * _FlowTime) + flow.rg * _FlowIntensity;
+                float3 light = _MainLightPosition.xyz;
+                float3 lightColor = _MainLightColor.rgb;
+                float4 color = _MainTex.Sample(sampler_MainTex,i.uv);
+
+                float3 NdotL = saturate(dot(i.normal,light));
+                //float3 toonLight = NdotL > 0 ? lightColor : 0;
+                float3 toonLight = ceil(NdotL* _LightWidth) / _LightStep ;
+                color.rgb *= toonLight;
+                // float4 color = tex2D(_MainTex,i.uv) * _MainColor;
                 // float2 uv = i.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw // xy는 scale zw 는 offset
                 // clip(color.a - 0.5); 그레이 스케일로 변겹후 플롯 값 하나 추가해서 알파채널 날려주기  
                 return color;
