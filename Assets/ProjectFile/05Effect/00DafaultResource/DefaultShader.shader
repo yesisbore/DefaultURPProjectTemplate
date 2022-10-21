@@ -136,13 +136,16 @@ Shader "Custum/DefaultShader"
             };
 
             // 변수 사용 
-            half4 _MainColor;
             
             Texture2D _MainTex;
             float4 _MainTex_ST; // 타일링 scale 과 offset을 한번에 가져옴
             SamplerState sampler_MainTex; 
             sampler2D _FlowMap;
+
+            CBUFFER_START(UnityPerMaterial)
+            half4 _MainColor;
             float _FlowTime,_FlowIntensity,_LightWidth,_LightStep;
+            CBUFFER_END
             
             // Separate textures and Samples
             // (분리해서 사용하면 더 많은 텍스쳐를 사용가능) OpenGL ES2.0 이상에서 사용
@@ -159,7 +162,7 @@ Shader "Custum/DefaultShader"
                 VertexOutput o;
                 o.vertex = TransformObjectToHClip(v.vertex.xyz); // MVP 한번에 처리
                 o.normal = TransformObjectToWorldNormal(v.normal);
-                o.uv = v.uv * _MainTex_ST.xy + _MainTex_ST.zw;
+                o.uv = TRANSFORM_TEX(v.uv,_MainTex);//v.uv * _MainTex_ST.xy + _MainTex_ST.zw;
 
                 //o.vertex.y += v.vertex.x;
                 half3 positionWS = TransformObjectToWorld(v.vertex.xyz);
@@ -177,7 +180,7 @@ Shader "Custum/DefaultShader"
                 //i.uv += frac(_Time.x * _FlowTime) + flow.rg * _FlowIntensity;
                 float3 light = _MainLightPosition.xyz;
                 float3 lightColor = _MainLightColor.rgb;
-                float4 color = _MainTex.Sample(sampler_MainTex,i.uv);
+                float4 color = SAMPLE_TEXTURE2D(_MainTex,sampler_MainTex,i.uv);//_MainTex.Sample(sampler_MainTex,i.uv);
 
                 float3 NdotL = saturate(dot(i.normal,light));
                 //float3 toonLight = NdotL > 0 ? lightColor : 0;
