@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "SpaceBar",
                     "type": "Button",
                     "id": "adec7f77-53c9-44fd-a14a-91c5946d7128",
                     "expectedControlType": "Button",
@@ -288,7 +288,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
+                    "action": "SpaceBar",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -148,7 +148,7 @@ namespace UnityCore
 	                	}
 	                
 	                	// Jump
-	                	if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+	                	if (_input.SpaceBarPressed && _jumpTimeoutDelta <= 0.0f)
 	                	{
 	                		// the square root of H * -2 * G = how much velocity needed to reach desired height
 	                		_verticalVelocity = Mathf.Sqrt(_jumpHeight * -2f * _gravity);
@@ -172,7 +172,7 @@ namespace UnityCore
 	                	}
 	                
 	                	// if we are not grounded, do not jump
-	                	_input.jump = false;
+	                	// ---------------------------------------_input.SpaceBarPressed = false;
 	                }
 	                
 	                // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
@@ -190,17 +190,17 @@ namespace UnityCore
 				private void Move()
 				{
 					// Set target speed based on move speed, sprint speed and if sprint is pressed
-					var targetSpeed = _input.sprint ? _sprintSpeed : _moveSpeed;
+					var targetSpeed = _input.Sprint ? _sprintSpeed : _moveSpeed;
 
 					// note: Vector2's == operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 					// if there is no input, set the target speed to 0
-					if (_input.move == Vector2.zero) targetSpeed = 0.0f;
+					if (_input.MoveCoordinate == Vector2.zero) targetSpeed = 0.0f;
 					
 					// a reference to the players current horizontal velocity
 					var currentHorizontalSpeed = new Vector3(_controller.velocity.x, 0.0f, _controller.velocity.z).magnitude;
 					
 					var speedOffset = 0.1f;
-					var inputMagnitude = _input.analogMovement ? _input.move.magnitude : 1f;
+					var inputMagnitude = _input.analogMovement ? _input.MoveCoordinate.magnitude : 1f;
 					
 					// accelerate or decelerate to target speed
 					if (currentHorizontalSpeed < targetSpeed - speedOffset || currentHorizontalSpeed > targetSpeed + speedOffset)
@@ -218,14 +218,14 @@ namespace UnityCore
 					}
 					
 					// normalise input direction
-					Vector3 inputDirection = new Vector3(_input.move.x, 0.0f, _input.move.y).normalized;
+					Vector3 inputDirection = new Vector3(_input.MoveCoordinate.x, 0.0f, _input.MoveCoordinate.y).normalized;
 					
 					// note: Vector2's != operator uses approximation so is not floating point error prone, and is cheaper than magnitude
 					// if there is a move input rotate player when the player is moving
-					if (_input.move != Vector2.zero)
+					if (_input.MoveCoordinate != Vector2.zero)
 					{
 						// move
-						inputDirection = transform.right * _input.move.x + transform.forward * _input.move.y;
+						inputDirection = transform.right * _input.MoveCoordinate.x + transform.forward * _input.MoveCoordinate.y;
 					}
 					
 					// move the player
@@ -235,13 +235,13 @@ namespace UnityCore
 				private void CameraRotation()
 				{
 					// if there is an input
-					if (_input.look.sqrMagnitude >= _threshold)
+					if (_input.LookCoordinate.sqrMagnitude >= _threshold)
 					{
 						//Don't multiply mouse input by Time.deltaTime
 						float deltaTimeMultiplier = IsCurrentDeviceMouse ? 1.0f : Time.deltaTime;
 						
-						_cinemachineTargetPitch += -_input.look.y * _rotationSpeed * deltaTimeMultiplier;
-						_rotationVelocity = _input.look.x * _rotationSpeed * deltaTimeMultiplier;
+						_cinemachineTargetPitch += -_input.LookCoordinate.y * _rotationSpeed * deltaTimeMultiplier;
+						_rotationVelocity = _input.LookCoordinate.x * _rotationSpeed * deltaTimeMultiplier;
 					
 						// clamp our pitch rotation
 						_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, _bottomClamp, _topClamp);

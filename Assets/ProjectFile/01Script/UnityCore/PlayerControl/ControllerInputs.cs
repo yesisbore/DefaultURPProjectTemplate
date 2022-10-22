@@ -8,7 +8,8 @@ namespace UnityCore
 {
     namespace PlayerControl
     {
-        public class ControllerInputs : MonoBehaviour
+	    [RequireComponent(typeof(PlayerInput))]
+        public class ControllerInputs : Singleton<ControllerInputs>
         {
 	        #region Variables
 
@@ -16,12 +17,29 @@ namespace UnityCore
 	        public DeviceType CurrentDevice = DeviceType.PC;
 	        
 	        [Header("Character Input Values")]
-	        public Vector2 inputPosition;
-	        public Vector2 move;
-	        public Vector2 look;
-	        public bool screenPressed;
-	        public bool jump;
-	        public bool sprint;
+	        public Vector2 InputPosition;
+	        public Vector2 MoveCoordinate;
+	        public Vector2 LookCoordinate;
+
+	        public bool ScreenPressed
+	        {
+		        get
+		        {
+			        if (!_screenPressed) return false;
+			        _screenPressed = false;
+			        return true;
+		        }
+	        }
+	        public bool SpaceBarPressed
+	        {
+		        get
+		        {
+			        if (!_spaceBarPressed) return false;
+			        _spaceBarPressed = false;
+			        return true;
+		        }
+	        }
+	        public bool Sprint;
 
 	        [Header("Movement Settings")]
 	        public bool analogMovement;
@@ -34,6 +52,9 @@ namespace UnityCore
 	        // Private
 	        private PlayerInput _playerInput;
 	        private bool _initialized = false;
+	        private bool _screenPressed;
+	        private bool _spaceBarPressed;
+	        
 	        #endregion Variables
 
 	        #region Unity Methods
@@ -44,7 +65,7 @@ namespace UnityCore
 	        } // End of Unity - Start
 
 	        #endregion Unity Methods
-	        
+
 	        #region Get input from Player Input
 
 #if ENABLE_INPUT_SYSTEM
@@ -59,7 +80,7 @@ namespace UnityCore
 	        }
 
 	        public void OnScreenPress(InputValue value) => SetScreenPressInput(value.isPressed);
-	        public void OnJump(InputValue value) => SetJumpInput(value.isPressed);
+	        public void OnSpaceBar(InputValue value) => SetSpaceBarInput(value.isPressed);
 	        public void OnSprint(InputValue value) => SetSprintInput(value.isPressed);
 	        
 #endif
@@ -68,13 +89,13 @@ namespace UnityCore
 	        #endregion Get input from Player Input
 	        
 	        #region Set Input Methods
-			private void SetInputPosition(Vector2 newInputPosition) => inputPosition = newInputPosition;
-	        private void SetMoveInput(Vector2 newMoveDirection) => move = newMoveDirection;
-	        private void SetLookInput(Vector2 newLookDirection) => look = newLookDirection;
+			private void SetInputPosition(Vector2 newInputPosition) => InputPosition = newInputPosition;
+	        private void SetMoveInput(Vector2 newMoveDirection) => MoveCoordinate = newMoveDirection;
+	        private void SetLookInput(Vector2 newLookDirection) => LookCoordinate = newLookDirection;
 	        
-	        private void SetScreenPressInput(bool newScreenPressState) => screenPressed = newScreenPressState;
-	        private void SetJumpInput(bool newJumpState) => jump = newJumpState;
-	        private void SetSprintInput(bool newSprintState) =>  sprint = newSprintState;
+	        private void SetScreenPressInput(bool newScreenPressState) => _screenPressed = newScreenPressState;
+	        private void SetSpaceBarInput(bool newSpaceBarState) => _spaceBarPressed = newSpaceBarState;
+	        private void SetSprintInput(bool newSprintState) =>  Sprint = newSprintState;
 	        
 	        #endregion Set Input Methods
 

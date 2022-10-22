@@ -36,20 +36,8 @@ namespace UnityCore
             private bool _initialized = false;
             
             // Input
-            private ControllerInputs _controllerInputs;
-
-            private Vector2 InputPosition => _controllerInputs.inputPosition;
-            private bool ScreenPressed
-            {
-                get
-                {
-                    if (!_controllerInputs.screenPressed) return false;
-                    
-                    _controllerInputs.screenPressed = false;
-                    return true;
-
-                }
-            }
+            private Vector2 InputPosition => ControllerInputs.Instance.InputPosition;
+            private bool ScreenPressed => ControllerInputs.Instance.ScreenPressed;
 
             #endregion Variables
 
@@ -119,7 +107,6 @@ namespace UnityCore
             private void GetComponents()
             {
                 _mainCamera = Camera.main;
-                _controllerInputs = GetComponent<ControllerInputs>();
                 
             } // End of GetComponents
 
@@ -154,11 +141,11 @@ namespace UnityCore
             {
                 get
                 {
-                    if (_controllerInputs.CurrentDevice == DeviceType.PC)
+                    if (ControllerInputs.Instance.CurrentDevice == DeviceType.PC)
                     {
                         return EventSystem.current.IsPointerOverGameObject();
                     }
-                    else if (_controllerInputs.CurrentDevice == DeviceType.Touch)
+                    else if (ControllerInputs.Instance.CurrentDevice == DeviceType.Touch)
                     {
                         foreach (Touch touch in Input.touches)
                         {

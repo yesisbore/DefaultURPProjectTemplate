@@ -55,7 +55,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Jump"",
+                    ""name"": ""SpaceBar"",
                     ""type"": ""Button"",
                     ""id"": ""adec7f77-53c9-44fd-a14a-91c5946d7128"",
                     ""expectedControlType"": ""Button"",
@@ -310,7 +310,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Jump"",
+                    ""action"": ""SpaceBar"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -934,7 +934,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_ScreenPress = m_Player.FindAction("ScreenPress", throwIfNotFound: true);
-        m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_SpaceBar = m_Player.FindAction("SpaceBar", throwIfNotFound: true);
         m_Player_Sprint = m_Player.FindAction("Sprint", throwIfNotFound: true);
         m_Player_InputPosition = m_Player.FindAction("InputPosition", throwIfNotFound: true);
         // UI
@@ -1011,7 +1011,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_ScreenPress;
-    private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_SpaceBar;
     private readonly InputAction m_Player_Sprint;
     private readonly InputAction m_Player_InputPosition;
     public struct PlayerActions
@@ -1021,7 +1021,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @ScreenPress => m_Wrapper.m_Player_ScreenPress;
-        public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @SpaceBar => m_Wrapper.m_Player_SpaceBar;
         public InputAction @Sprint => m_Wrapper.m_Player_Sprint;
         public InputAction @InputPosition => m_Wrapper.m_Player_InputPosition;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -1042,9 +1042,9 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
                 @ScreenPress.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPress;
                 @ScreenPress.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPress;
                 @ScreenPress.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnScreenPress;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @SpaceBar.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpaceBar;
+                @SpaceBar.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpaceBar;
+                @SpaceBar.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSpaceBar;
                 @Sprint.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                 @Sprint.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
                 @Sprint.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSprint;
@@ -1064,9 +1064,9 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
                 @ScreenPress.started += instance.OnScreenPress;
                 @ScreenPress.performed += instance.OnScreenPress;
                 @ScreenPress.canceled += instance.OnScreenPress;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
+                @SpaceBar.started += instance.OnSpaceBar;
+                @SpaceBar.performed += instance.OnSpaceBar;
+                @SpaceBar.canceled += instance.OnSpaceBar;
                 @Sprint.started += instance.OnSprint;
                 @Sprint.performed += instance.OnSprint;
                 @Sprint.canceled += instance.OnSprint;
@@ -1232,7 +1232,7 @@ public partial class @DefaultInputs : IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnScreenPress(InputAction.CallbackContext context);
-        void OnJump(InputAction.CallbackContext context);
+        void OnSpaceBar(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnInputPosition(InputAction.CallbackContext context);
     }

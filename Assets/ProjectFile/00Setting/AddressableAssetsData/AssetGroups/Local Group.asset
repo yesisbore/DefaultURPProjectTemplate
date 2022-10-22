@@ -29,6 +29,10 @@ MonoBehaviour:
     m_Address: FloaingPopUp UI
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: dd8671f4ce7824ff39ba56dd122dfc29
+    m_Address: Bullet
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: a2deac4653c164d81b4e65d7c45e5979, type: 2}
   m_SchemaSet:
