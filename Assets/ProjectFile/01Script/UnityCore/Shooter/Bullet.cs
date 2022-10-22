@@ -20,6 +20,7 @@ namespace UnityCore
             private float _damage;
             private float _moveSpeed;
             private bool _isShoot = false;
+            private bool _isEntered = false;
             
             #endregion Variables
         
@@ -28,6 +29,9 @@ namespace UnityCore
 
             private void OnCollisionEnter(Collision collision)
             {
+                if(_isEntered) return;
+
+                _isEntered = true;
                 ContactPoint contact = collision.contacts[0];
                 IDamgeable damgeableObject = collision.transform.GetComponent<IDamgeable>();
                 damgeableObject?.TakeHit(_damage,contact.point);

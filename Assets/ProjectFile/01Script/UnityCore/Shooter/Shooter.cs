@@ -22,7 +22,6 @@ namespace UnityCore
             private Camera _cam;
             
             private Vector2 InputPosition => ControllerInputs.Instance.InputPosition;
-            private bool ScreenPressed => ControllerInputs.Instance.ScreenPressed;
             
             #endregion Variables
         
@@ -30,8 +29,6 @@ namespace UnityCore
         
             private void Start() { Initialize();} // End of Unity - Start
 
-            private void Update() { Shoot();} // End of Unity - Update
-        
             #endregion Unity Methods
         
             #region Public Methods
@@ -43,6 +40,7 @@ namespace UnityCore
             private void Initialize()
             {
                 GetComponents();
+                SubscribeInputEvent();
                 
                 Log("Initialized");
             } // End of Initialize
@@ -50,11 +48,14 @@ namespace UnityCore
             {
                 _cam = GetComponent<Camera>();
             } // End of GetComponents
-
+            
+            private void SubscribeInputEvent()
+            {
+                ControllerInputs.Instance.OnScreenPressed .AddListener(Shoot);
+            } // End of SubscribeInputEvent
+            
             private void Shoot()
             {
-                if(!ScreenPressed) return;
-
                 GenerateBullet();
                 Log("Shoot!");
             } // End of Shoot

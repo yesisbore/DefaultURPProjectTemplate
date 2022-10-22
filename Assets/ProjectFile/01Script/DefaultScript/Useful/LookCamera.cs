@@ -6,6 +6,7 @@ using UnityEngine;
 public class LookCamera : MonoBehaviour
 {
     private Camera _mainCam;
+    
     void Start()
     {
         _mainCam = Camera.main;

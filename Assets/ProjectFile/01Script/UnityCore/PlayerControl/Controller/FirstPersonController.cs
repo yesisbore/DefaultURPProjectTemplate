@@ -172,7 +172,7 @@ namespace UnityCore
 	                	}
 	                
 	                	// if we are not grounded, do not jump
-	                	// ---------------------------------------_input.SpaceBarPressed = false;
+	                	_input.SpaceBarPressed = false;
 	                }
 	                
 	                // apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)

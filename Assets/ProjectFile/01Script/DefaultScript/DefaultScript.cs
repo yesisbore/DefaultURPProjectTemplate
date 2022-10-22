@@ -23,10 +23,19 @@
     
     #region Private Methods
 
-    //private void Initialize(){GetComponents();} // End of Initialize
+    //private void Initialize()
+    //{
+    //  GetComponents();
+    //  SubscribeInputEvent();
+    // } // End of Initialize
     
     //private void GetComponents(){} // End of GetComponents
-
+    
+    // private void SubscribeInputEvent()
+    // {
+    //     ControllerInputs.Instance.OnSpaceBarPressed .AddListener(ShieldControl);
+    // } // End of SubscribeInputEvent
+    
     // private IEnumerator CO_Lerp()
     // {
     // var initialValue = 1.0f;

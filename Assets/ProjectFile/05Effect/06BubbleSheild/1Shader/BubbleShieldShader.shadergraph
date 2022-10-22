@@ -8550,7 +8550,7 @@
     "m_RefNameGeneratedByDisplayName": "",
     "m_DefaultReferenceName": "Vector3_a1dc6aec9c4446e7b2ac32a6487c43eb",
     "m_OverrideReferenceName": "_HitPos",
-    "m_GeneratePropertyBlock": false,
+    "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
     "m_CustomSlotLabel": "",
     "m_Precision": 0,

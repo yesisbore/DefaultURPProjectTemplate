@@ -27,9 +27,9 @@ namespace UnityCore
        
            #region Public Methods
        
-           public void TakeHit(float damage, Vector3 localHitPos)
+           public void TakeHit(float damage, Vector3 hitPos)
            {
-               var hitWorldPosition = transform.position + localHitPos;
+               var hitWorldPosition = transform.position + hitPos;
                
                Log("HitWorldPosition : " + hitWorldPosition);
                Log(gameObject.name + " - Damaged : " + damage);

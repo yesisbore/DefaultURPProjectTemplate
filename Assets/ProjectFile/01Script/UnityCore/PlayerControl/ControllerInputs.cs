@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using DeviceType = GlobalType.DeviceType;
 #if ENABLE_INPUT_SYSTEM 
 using UnityEngine.InputSystem;
@@ -21,24 +22,8 @@ namespace UnityCore
 	        public Vector2 MoveCoordinate;
 	        public Vector2 LookCoordinate;
 
-	        public bool ScreenPressed
-	        {
-		        get
-		        {
-			        if (!_screenPressed) return false;
-			        _screenPressed = false;
-			        return true;
-		        }
-	        }
-	        public bool SpaceBarPressed
-	        {
-		        get
-		        {
-			        if (!_spaceBarPressed) return false;
-			        _spaceBarPressed = false;
-			        return true;
-		        }
-	        }
+	        public bool ScreenPressed;
+	        public bool SpaceBarPressed;
 	        public bool Sprint;
 
 	        [Header("Movement Settings")]
@@ -52,8 +37,6 @@ namespace UnityCore
 	        // Private
 	        private PlayerInput _playerInput;
 	        private bool _initialized = false;
-	        private bool _screenPressed;
-	        private bool _spaceBarPressed;
 	        
 	        #endregion Variables
 
@@ -65,6 +48,13 @@ namespace UnityCore
 	        } // End of Unity - Start
 
 	        #endregion Unity Methods
+
+	        #region Callback
+
+	        public UnityEvent OnSpaceBarPressed = new UnityEvent();
+	        public UnityEvent OnScreenPressed = new UnityEvent();
+
+	        #endregion Callback
 
 	        #region Get input from Player Input
 
@@ -93,8 +83,18 @@ namespace UnityCore
 	        private void SetMoveInput(Vector2 newMoveDirection) => MoveCoordinate = newMoveDirection;
 	        private void SetLookInput(Vector2 newLookDirection) => LookCoordinate = newLookDirection;
 	        
-	        private void SetScreenPressInput(bool newScreenPressState) => _screenPressed = newScreenPressState;
-	        private void SetSpaceBarInput(bool newSpaceBarState) => _spaceBarPressed = newSpaceBarState;
+	        private void SetScreenPressInput(bool newScreenPressState)
+	        {
+		        OnScreenPressed.Invoke();
+		        ScreenPressed = newScreenPressState;
+	        }
+
+	        private void SetSpaceBarInput(bool newSpaceBarState)
+	        {
+		        OnSpaceBarPressed.Invoke();
+		        SpaceBarPressed = newSpaceBarState;
+	        }
+
 	        private void SetSprintInput(bool newSprintState) =>  Sprint = newSprintState;
 	        
 	        #endregion Set Input Methods
