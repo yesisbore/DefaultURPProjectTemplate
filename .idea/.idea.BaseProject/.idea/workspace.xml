@@ -3,17 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/DefaultScript.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/Useful/LookCamera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/DefaultScript/Useful/LookCamera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalInterface.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalInterface.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Enemy/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Enemy/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/ControllerInputs.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Shooter/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Shooter/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Shooter/Shooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Shooter/Shooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/BubbleShieldShader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/BubbleShieldShader.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/BubbleShield.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/BubbleShield.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/06Material/Prototype/Prototype_512x512_Grey3.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/06Material/Prototype/Prototype_512x512_Grey3.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/WhiteClown_material.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/WhiteClown_material.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/2Script/Phase.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/MagnifyingObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -112,7 +109,8 @@
       <workItem from="1666058432434" duration="13479000" />
       <workItem from="1666195542708" duration="2124000" />
       <workItem from="1666354976376" duration="8250000" />
-      <workItem from="1666405928654" duration="12133000" />
+      <workItem from="1666405928654" duration="12456000" />
+      <workItem from="1666607321979" duration="5026000" />
     </task>
     <servers />
   </component>
