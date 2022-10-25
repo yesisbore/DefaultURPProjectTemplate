@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Main
-  m_Shader: {fileID: -6465566751694194690, guid: 9c6ed3afd559744e5a49eaae86f91d38, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 274e42b813c98da4c973583d57be3a3c, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -61,6 +61,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -94,6 +98,7 @@ Material:
     - _AdjustZValue: 0.5
     - _AlphaClip: 0
     - _Blend: 0
+    - _BlendOp: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -101,7 +106,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DisplacementStrength: 3.19
+    - _DisplacementStrength: 11.27
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
@@ -114,6 +119,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _SampleGI: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpawnProgress: 0
@@ -126,7 +132,7 @@ Material:
     m_Colors:
     - _BaseColor: {r: 0.8066572, g: 0.49699634, b: 0.1849773, a: 1}
     - _Color: {r: 0.8066572, g: 0.49699634, b: 0.18497726, a: 1}
-    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColor: {r: 0, g: 0.4110751, b: 2, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _WorldOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
