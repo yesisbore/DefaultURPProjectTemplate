@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnCylinder_Shader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnCylinder_Shader.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material/SpawnCylinder_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material/SpawnCylinder_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixelArt_Shader.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixelArt_Shader.shadergraph" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/._HorrorCharacter.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/._HorrorCharacter.fbx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +105,7 @@
       <workItem from="1666354976376" duration="8250000" />
       <workItem from="1666405928654" duration="12456000" />
       <workItem from="1666607321979" duration="5026000" />
-      <workItem from="1666719567632" duration="666000" />
+      <workItem from="1666719567632" duration="816000" />
     </task>
     <servers />
   </component>
