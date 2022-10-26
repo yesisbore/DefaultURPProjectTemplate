@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0cfb5a3795743ae9d0fce796749f81, type: 3}
   m_Name: GameSetting
   m_EditorClassIdentifier: 
-  DebugMode: 0
   TargetResolution: 1
-  DeviceTarget: 1
+  DeviceType: 0
+  SkyboxSetting: {fileID: 2100000, guid: 19ca74e2983924fcc98944968e918eda, type: 2}
   VolumeMaster: 0.643
   VolumeBGM: 0.626
   VolumeEffect: 0.558

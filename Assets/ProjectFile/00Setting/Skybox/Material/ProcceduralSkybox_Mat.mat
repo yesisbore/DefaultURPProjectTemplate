@@ -48,7 +48,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DayColorBlend: 1
-    - _DayProgress: 0.994
+    - _DayProgress: 0.998
     - _HorizontalBlendPower: 13.1
     - _NadirBlendPower: 0.867
     - _QueueControl: 0

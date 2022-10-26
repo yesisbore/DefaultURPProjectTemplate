@@ -9,7 +9,10 @@ public class GameSetting : SingletonScriptableObject<GameSetting>
 
     public TargetResolution TargetResolution = GlobalType.TargetResolution.FHD;
 
-    public DeviceType DeviceType = DeviceType.PC; 
+    public DeviceType DeviceType = DeviceType.PC;
+
+    [Header("Environment Setting")] 
+    public Material SkyboxSetting;
     
     [Header("Volume Setting")] 
     [Range(0.0f,1.0f)]
