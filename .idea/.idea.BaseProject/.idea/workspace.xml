@@ -2,7 +2,226 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/00Setting/RenderPipeline/Global Volume Profile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Base Folder/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Test.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Test/Impact_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Test/Impact_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Test/Impact_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/00Test/Impact_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/0Prefab/SimpleLiquidBottle.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/0Prefab/SimpleLiquidBottle.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/1VFX Graph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/1VFX Graph/SImpleLiquid_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/1VFX Graph/SImpleLiquid_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/2Script/SimpleLiquid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/2Script/SimpleLiquid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/Bottle_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/Bottle_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/Cap_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/Cap_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/3Material/_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/4Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/4Mesh/SimpleLiquidBottle.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/4Mesh/SimpleLiquidBottle.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/4Mesh/SimpleLiquidBottle.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/4Mesh/SimpleLiquidBottle.blend1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/0Prefab/Ripple.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/0Prefab/Ripple.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/1Shader/Ripple_Shader.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/1Shader/Ripple_Shader.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/3Material/Ripple_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02Ripple/3Material/Ripple_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Dot_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Dot_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Grid_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Grid_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/HexLatice_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/HexLatice_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/SmoothWave_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/SmoothWave_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Spiral_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Spiral_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Star_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Star_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Stripe_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Stripe_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Whirl_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/Whirl_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/ZigZag_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Material/ZigZag_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/.sample.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Bacteria.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Bacteria.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/BacteriaSmoothstep.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/BacteriaSmoothstep.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Brick.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Brick.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Herringbone.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Herringbone.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Truchet.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/Procedural Patterns/Truchet.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Dot_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Dot_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Grid_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Grid_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/HexLatice_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/HexLatice_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/SmoothWave_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/SmoothWave_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Spiral_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Spiral_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Star_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Star_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Stripe_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Stripe_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Whirl_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/Whirl_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/ZigZag_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/03Procedural Patterns/ShaderGraph/ZigZag_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/0Prefab/Phase.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/0Prefab/Phase.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/1Shader/Phase_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/1Shader/Phase_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/2Script/Phase.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/2Script/Phase.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/3Material/Phase_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/3Material/Phase_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/0Prefab/Dissolve.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/0Prefab/Dissolve.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/1Shader/Dissolve_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/1Shader/Dissolve_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/2Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/2Material/Dissolve_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/05Dissolve/2Material/Dissolve_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/BubbleShield.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/BubbleShield.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/FresnelOutline.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/FresnelOutline.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/HitEffect.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/HitEffect.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/ShieldDisolve.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/ShieldDisolve.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/TwirlDistortion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/TwirlDistortion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/VertexDIsplacement.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/VertexDIsplacement.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/Zoom.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/0Prefab/Zoom.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/._BubbleShieldShader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/BubbleShieldShader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/BubbleShieldShader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/FresnelOutline_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/FresnelOutline_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/HitEffect_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/HitEffect_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/ShieldDisolve_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/ShieldDisolve_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/TwirlDistortion_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/TwirlDistortion_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/VertexDisplacement_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/VertexDisplacement_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/Zoom_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/1Shader/Zoom_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/MagnifyingObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/MagnifyingObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/BubbleShield_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/BubbleShield_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/FresnelOutline_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/FresnelOutline_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/HitEffect_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/HitEffect_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/ShieldDisolve_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/ShieldDisolve_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/TwirlDistortion_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/TwirlDistortion_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/VertexDisplacement_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/VertexDisplacement_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/Zoom_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/3Material/Zoom_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/4Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/4Mesh/._Circle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/4Mesh/Circle.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/4Mesh/Circle.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnCylinder_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnCylinder_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnEffect_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/1Shader/SpawnEffect_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material/SpawnCylinder_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material/SpawnCylinder_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/3Material/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/4Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/0Prefab/PixelArt.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/0Prefab/PixelArt.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/0Prefab/PixelArt_Center.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/0Prefab/PixelArt_Center.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixeArtCenterl_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixeArtCenterl_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixelArt_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/1Shader/PixelArt_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material/PixelArtCenter_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material/PixelArtCenter_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material/PixelArt_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material/PixelArt_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/3Material/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/10PixelArt/4Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/0Prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/1Shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/1Shader/Matrix_Shader.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/1Shader/Matrix_Shader.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/2Script.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material/Matrix_Mat.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material/Matrix_Mat.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material/Texture.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material/Texture/MatrixLetter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/3Material/Texture/MatrixLetter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/11MatrixEffect/4Mesh.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/08Animation/Character/Landing.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/08Animation/Character/Landing.fbx.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/01Character/Horror Character/HorrorCharacter.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/EffectTestScene/Effect Test - 3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,18 +238,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/GameSetting/GlobalInterface.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestEffect2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/SimpleFirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Shooter/Bullet.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/01Simple Liquid/2Script/SimpleLiquid.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/04Phase/2Script/Phase.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/MagnifyingObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/06BubbleSheild/2Script/Shield.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/05Effect/09SpawnEffect/2Script/SpawnEffect.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/InputValue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.4.3/InputSystem/Plugins/PlayerInput/PlayerInput.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -106,6 +319,8 @@
       <workItem from="1666405928654" duration="12456000" />
       <workItem from="1666607321979" duration="5026000" />
       <workItem from="1666719567632" duration="816000" />
+      <workItem from="1666802822750" duration="1957000" />
+      <workItem from="1666839071705" duration="570000" />
     </task>
     <servers />
   </component>
