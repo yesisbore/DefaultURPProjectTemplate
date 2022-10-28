@@ -2223,7 +2223,7 @@ GameObject:
   - component: {fileID: 1472715242}
   - component: {fileID: 1472715241}
   m_Layer: 0
-  m_Name: Star
+  m_Name: Tessellation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2263,7 +2263,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7fabd5a6364f14e65b95ca75664d7104, type: 2}
+  - {fileID: 2100000, guid: 22ef4d40e1a4d4232b88ffb01329eb6a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
