@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/00SampleModel/SampleCube.blend.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/10Modeling/00SampleModel/SampleCube.blend.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Effect Test/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Effect Test/Effect Test - 3D.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +105,7 @@
       <workItem from="1666719567632" duration="816000" />
       <workItem from="1666802822750" duration="1957000" />
       <workItem from="1666839071705" duration="785000" />
-      <workItem from="1666974785473" duration="2974000" />
+      <workItem from="1666974785473" duration="3866000" />
     </task>
     <servers />
   </component>
