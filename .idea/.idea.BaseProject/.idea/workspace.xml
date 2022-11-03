@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02VFX/03SmokePoof/SmokePoof.vfx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02VFX/03SmokePoof/SmokePoof.vfx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02VFX/04WarpEffect/WarpEffect.vfx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/05Effect/02VFX/04WarpEffect/WarpEffect.vfx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/07Texture/._Noise01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/07Texture/Noise01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/07Texture/Noise01.png.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Effect Test/Effect Test - 3D.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/Effect Test/Effect Test - 3D.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,6 +111,7 @@
       <workItem from="1666974785473" duration="3866000" />
       <workItem from="1667202712784" duration="452000" />
       <workItem from="1667311672453" duration="868000" />
+      <workItem from="1667457493502" duration="1036000" />
     </task>
     <servers />
   </component>
