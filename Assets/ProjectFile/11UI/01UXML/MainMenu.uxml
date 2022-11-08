@@ -1,8 +1,13 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/ProjectFile/11UI/02USS/Main/Top.uss?fileID=7433441132597879392&amp;guid=095135db204ff403198bac7a2207fe35&amp;type=3#Top" />
-    <ui:VisualElement name="Top" style="cursor: initial; flex-direction: column-reverse; align-items: center; justify-content: center; width: 100%; height: 10%;">
-        <ui:Button text="Button - 1" display-tooltip-when-elided="true" name="Button-1" style="width: 200px; height: 200px;" />
-        <ui:Button text="Button - 2" display-tooltip-when-elided="true" name="Button-2" />
-        <ui:Button text="Button - 3" display-tooltip-when-elided="true" name="Button-3" />
+    <Style src="project://database/Assets/ProjectFile/11UI/02USS/Core/Section.uss?fileID=7433441132597879392&amp;guid=095135db204ff403198bac7a2207fe35&amp;type=3#Section" />
+    <Style src="project://database/Assets/ProjectFile/11UI/02USS/Button/Button.uss?fileID=7433441132597879392&amp;guid=b580414d66fa24d81905aef6f6af72d1&amp;type=3#Button" />
+    <ui:VisualElement name="Section-Main" class="Section-Main">
+        <ui:VisualElement name="Section-Top" class="Section-Top">
+            <ui:Button text="Button - 1" display-tooltip-when-elided="true" name="Button-1" class="Button-Test" />
+            <ui:Button text="Button - 2" display-tooltip-when-elided="true" name="Button-2" class="Button-Test" />
+            <ui:Button text="Button - 3" display-tooltip-when-elided="true" name="Button-3" class="Button-Test" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Section-Center" style="background-color: rgba(187, 187, 187, 255); width: 100%;" />
+        <ui:VisualElement name="Section-Bottom" style="background-color: rgba(187, 187, 187, 255); height: 100px; width: 100%;" />
     </ui:VisualElement>
 </ui:UXML>

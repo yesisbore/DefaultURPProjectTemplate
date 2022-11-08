@@ -1,0 +1,8 @@
+.Button-Test {
+    width: 20%;
+    height: 100%;
+    -unity-font: url('project://database/Assets/ProjectFile/00Setting/CustumFont/Base/SpoqaHanSansNeo-Bold.otf?fileID=12800000&guid=9942590de60fd41fc8099a4417437565&type=3#SpoqaHanSansNeo-Bold');
+    -unity-font-definition: none;
+    font-size: 18px;
+    background-color: rgba(170, 170, 170, 255);
+}
