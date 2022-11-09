@@ -7,7 +7,9 @@
             <ui:Button text="Button - 2" display-tooltip-when-elided="true" name="Button-2" class="Button-Test" />
             <ui:Button text="Button - 3" display-tooltip-when-elided="true" name="Button-3" class="Button-Test" />
         </ui:VisualElement>
-        <ui:VisualElement name="Section-Center" style="background-color: rgba(187, 187, 187, 255); width: 100%;" />
-        <ui:VisualElement name="Section-Bottom" style="background-color: rgba(187, 187, 187, 255); height: 100px; width: 100%;" />
+        <ui:VisualElement name="Section-Center" style="background-color: rgb(187, 187, 187); width: 100%; flex-shrink: 1; flex-grow: 1; margin-top: 12px; margin-bottom: 12px;" />
+        <ui:VisualElement name="Section-Bottom" style="background-color: rgb(187, 187, 187); height: 100px; width: 100%;">
+            <ui:Label text="Label" display-tooltip-when-elided="true" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
