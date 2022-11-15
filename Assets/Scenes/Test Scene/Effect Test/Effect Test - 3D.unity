@@ -273,6 +273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpawnCylinder
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6eeff1a18ed8a0b45b2d60fa9a2a8ea4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6eeff1a18ed8a0b45b2d60fa9a2a8ea4, type: 3}
 --- !u!1001 &215877865
@@ -1342,7 +1346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &536517418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1381,7 +1385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 536517417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.112090714, y: 4.2155128, z: 0.51133525}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1471,15 +1475,33 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600399923}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d81704b1fdcc452a826669d1031d935, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   DebugMode: 1
+  TextureSize: 512
   _paintableLayerMask:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &600399929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600399923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dd839a13a5247a696c4023680f0031, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TextureSize: 1024
+  _previousMaterial: {fileID: 2100000, guid: e2970a693c76c4371840d13176ba697d, type: 2}
+  _paintMaterial: {fileID: 2100000, guid: 53b5180e629f645c5a83164180a42964, type: 2}
+  _renderer: {fileID: 0}
+  _renderTexture: {fileID: 0}
 --- !u!1 &673753117
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2904,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1544806954
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3235,7 +3257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1618636102
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 namespace Paint
 {
@@ -11,12 +12,14 @@ namespace Paint
         // Public Variables
     
         // Private Variables
-    
+
+        private CommandBuffer _commandBuffer;
+        
         #endregion Variables
 
         #region Unity Methods
 
-        //private void Start() { Initialize();} // End of Unity - Start
+        private void Start() { Initialize();} // End of Unity - Start
 
         //private void Update(){} // End of Unity - Update
 
@@ -34,13 +37,17 @@ namespace Paint
     
         #region Private Methods
 
-        //private void Initialize()
-        //{
-        //  GetComponents();
-        //  SubscribeInputEvent();
-        // } // End of Initialize
-    
-        //private void GetComponents(){} // End of GetComponents
+        private void Initialize()
+        {
+          GetComponents();
+         } // End of Initialize
+
+        private void GetComponents()
+        {
+            _commandBuffer = new CommandBuffer();
+            _commandBuffer.name = "CommandBuffer - " + gameObject.name;
+
+        } // End of GetComponents
 
         #endregion Private Methods
 
