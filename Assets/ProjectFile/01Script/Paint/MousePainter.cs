@@ -67,7 +67,7 @@ namespace Paint
                 return;
             }
             
-            PaintManager.Instance.Paint(paintTarget,hitInfo.point);
+            PaintManager.Instance.Paint(paintTarget,hitInfo.point,0.1f);
         }  // End of Paint
         
         #endregion Private Methods

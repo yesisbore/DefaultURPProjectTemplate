@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BaseProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/01UXML/MainMenu.uxml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectFile/11UI/01UXML/MainMenu.uxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/02USS/Button/TestButton.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/02USS/Button/TestButton.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/02USS/Main.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/02USS/Main/Top.uss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectFile/11UI/02USS/Main/Top.uss.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Scene/UI Test.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Scene/UI Test.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="54224f9d-d536-413a-b78d-a1f1bc93a7a6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +16,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f3ba82d6742941a19c45cede06b6aa4e157a00/c6/47168b82/CommandBuffer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/Paint/MaskTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/TestScript/TestEffect2D.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/Enemy/Enemy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectFile/01Script/UnityCore/PlayerControl/Controller/FirstPersonController.cs" root0="FORCE_HIGHLIGHTING" />
@@ -118,6 +110,11 @@
       <workItem from="1667311672453" duration="868000" />
       <workItem from="1667457493502" duration="3452000" />
       <workItem from="1667920735784" duration="571000" />
+      <workItem from="1668609821753" duration="1134000" />
+      <workItem from="1668752279789" duration="2412000" />
+      <workItem from="1668852073968" duration="15715000" />
+      <workItem from="1671546023446" duration="856000" />
+      <workItem from="1672724831426" duration="79000" />
     </task>
     <servers />
   </component>

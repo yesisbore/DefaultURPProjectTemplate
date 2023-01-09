@@ -1,8 +1,10 @@
-Shader "Custum/DefaultShader"
+Shader "Custum/PaintTest"
 {
     Properties
     {
         _MainTex("MainTexture",2D) = "white"{}
+        _Mask("Mask",2D) = "white"{}
+        
         _PainterColor("Painter Color", Color) = (0, 0, 0, 0)
     } 
 
@@ -17,7 +19,7 @@ Shader "Custum/DefaultShader"
         
         Pass
         {
-            Cull Off ZWrite Off ZTest Off
+            //Cull Off ZWrite Off ZTest Off
 
             HLSLPROGRAM // HLSL 시작
             // 컴파일러 지시자, 전처리기 
@@ -46,6 +48,7 @@ Shader "Custum/DefaultShader"
             // 변수 사용 
             
             sampler2D _MainTex;
+            sampler2D _Mask;
             float4 _MainTex_ST;
 
             float3 _PainterPosition;
@@ -59,14 +62,15 @@ Shader "Custum/DefaultShader"
             VertexOutput vert(VertexInput v)
             {
                 VertexOutput o;
-                // o.worldPos = mul(unity_ObjectToWorld, v.vertex);
-                // o.uv = v.uv;
-                // float4 uv = float4(0, 0, 0, 1);
-                // uv.xy = float2(1, _ProjectionParams.x) * (v.uv.xy * float2(2, 2) - float2(1, 1));
-                // o.vertex = uv;
-
-                o.vertex = TransformObjectToHClip(v.vertex.xyz);
-                o.uv = TRANSFORM_TEX(v.uv,_MainTex);
+                o.worldPos = mul(unity_ObjectToWorld, v.vertex);
+                //o.uv = v.uv;
+                float4 uv = float4(0, 0, 0, 1);
+                uv.xy = float2(1, _ProjectionParams.x) * (v.uv.xy * float2(2, 2) - float2(1, 1));
+                o.vertex = uv;
+                o.uv = uv;
+                
+                //o.vertex = TransformObjectToHClip(v.vertex.xyz);
+                // o.uv = TRANSFORM_TEX(v.uv,_MainTex);
                 
                 return o;
             }
@@ -87,8 +91,8 @@ Shader "Custum/DefaultShader"
                 // float4 color = tex2D(_MainTex,i.uv) * _MainColor;
                 // float2 uv = i.uv.xy * _MainTex_ST.xy + _MainTex_ST.zw // xy는 scale zw 는 offset
                 // clip(color.a - 0.5); 그레이 스케일로 변겹후 플롯 값 하나 추가해서 알파채널 날려주기
-                float4 red = float4(1.0,0.0,0.0,1.0);
-                return _PainterColor;
+                float4 color = float4(i.uv.x,0.0,0.0,1.0);
+                return color;
             }
             ENDHLSL // HLSL 끝
         }

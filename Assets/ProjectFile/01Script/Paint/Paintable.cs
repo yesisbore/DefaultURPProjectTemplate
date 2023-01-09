@@ -15,8 +15,13 @@ namespace Paint
         [SerializeField] private LayerMask _paintableLayerMask;
 
         private Renderer _renderer;
-        private RenderTexture _renderTexture;
+        private Material _material;
 
+        private RenderTexture _maskTexture;
+        
+        // Shader ID
+        private int ShaderID_MaskRenderTexture = Shader.PropertyToID("_MaskRenderTexture");
+        
         #endregion Variables
 
         #region Unity Methods
@@ -30,6 +35,13 @@ namespace Paint
 
         #region Public Methods
 
+        public RenderTexture GetMaskTexture() => _maskTexture;
+        
+        public void SetMask()
+        {
+            
+        } // End of SetMask
+        
         #endregion Public Methods
 
         #region Private Methods
@@ -37,7 +49,8 @@ namespace Paint
         private void Initialize()
         {
             GetComponents();
-
+            PaintManager.Instance.InitTexture(this);
+            
             Log("Initialized");
         } // End of Initialize
 
@@ -46,10 +59,14 @@ namespace Paint
             gameObject.layer = gameObject.layer != _paintableLayerMask ? gameObject.layer : _paintableLayerMask;
 
             _renderer = GetComponent<Renderer>();
-            _renderTexture = new RenderTexture(TextureSize, TextureSize, 0)
+            _material = _renderer.material;
+            
+            _maskTexture = new RenderTexture(TextureSize, TextureSize, 0)
             {
                 filterMode = FilterMode.Bilinear
             };
+            
+            _material.SetTexture(ShaderID_MaskRenderTexture, _maskTexture);
         } // End of GetComponents
 
         #endregion Private Methods
